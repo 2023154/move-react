@@ -1,0 +1,81 @@
+import { useEffect, useMemo, useState } from 'react'
+import { Header } from './components/Header'
+import { BottomNav } from './components/BottomNav'
+import { HomeScreen } from './screens/Home'
+import { SalesSections } from './components/SalesSections'
+import { Footer } from './components/Footer'
+import { baseContent, languages } from './data/content'
+import { useAutoTranslate } from './hooks/useAutoTranslate'
+
+const prefersLight = () => {
+  if (typeof window === 'undefined') return false
+  return window.matchMedia?.('(prefers-color-scheme: light)')?.matches
+}
+
+const getInitialLang = () => {
+  if (typeof navigator === 'undefined') return 'en'
+  const browserLang = navigator.language || 'en'
+  if (browserLang.startsWith('pt')) return 'pt'
+  if (browserLang.startsWith('es')) return 'es'
+  return 'en'
+}
+
+const readStorage = (key, fallback) => {
+  try {
+    const stored = localStorage.getItem(key)
+    return stored ? JSON.parse(stored) : fallback
+  } catch {
+    return fallback
+  }
+}
+
+const writeStorage = (key, value) => {
+  try {
+    localStorage.setItem(key, JSON.stringify(value))
+  } catch {
+    // ignore storage failures (Safari private mode, etc.)
+  }
+}
+
+export default function App() {
+  const [theme, setTheme] = useState(() => readStorage('theme', prefersLight() ? 'light' : 'dark'))
+  const [language, setLanguage] = useState(() => readStorage('language', getInitialLang()))
+
+  const { content, loading } = useAutoTranslate(baseContent, language)
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    writeStorage('theme', theme)
+  }, [theme])
+
+  useEffect(() => {
+    document.documentElement.lang = language
+    writeStorage('language', language)
+  }, [language])
+
+  const navLabels = useMemo(() => content.nav, [content])
+
+  return (
+    <div className={`min-h-screen bg-gradient-to-b ${theme === 'dark' ? 'from-night via-surface to-night text-slate-100' : 'from-slate-100 via-white to-slate-100 text-slate-900'} transition-colors duration-500`}>
+      <Header
+        labels={navLabels}
+        onThemeToggle={() => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))}
+      />
+
+      <main className="pb-32">
+        <HomeScreen
+          slides={content.hero.slides}
+          ctaLink={content.hero.ctaLink}
+          languages={languages}
+          currentLanguage={language}
+          onSelectLanguage={setLanguage}
+          loading={loading}
+        />
+        <SalesSections sales={content.sales} />
+      </main>
+
+      <Footer footer={content.footer} />
+      <BottomNav onThemeToggle={() => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))} />
+    </div>
+  )
+}
