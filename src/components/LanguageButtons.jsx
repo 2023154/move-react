@@ -13,7 +13,7 @@ export function LanguageButtons({ languages, active, onSelect, loading }) {
           }`}
         >
           <ReactCountryFlag svg countryCode={flag} className="text-base" />
-          <span className="uppercase tracking-wide">{code}</span>
+          <span className="tracking-wide">{label}</span>
         </button>
       ))}
       {loading && (

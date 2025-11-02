@@ -13,11 +13,16 @@ const prefersLight = () => {
 }
 
 const getInitialLang = () => {
-  if (typeof navigator === 'undefined') return 'en'
-  const browserLang = navigator.language || 'en'
+  if (typeof navigator === 'undefined') return 'pt'
+  const browserLang = (navigator.language || 'pt').toLowerCase()
   if (browserLang.startsWith('pt')) return 'pt'
   if (browserLang.startsWith('es')) return 'es'
-  return 'en'
+  if (browserLang.startsWith('fr')) return 'fr'
+  if (browserLang.startsWith('it')) return 'it'
+  if (browserLang.startsWith('zh')) return 'zh-CN'
+  if (browserLang.startsWith('mn')) return 'mn'
+  if (browserLang.startsWith('en')) return 'en'
+  return 'pt'
 }
 
 const readStorage = (key, fallback) => {

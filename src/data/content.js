@@ -1,9 +1,14 @@
 import heroPrimaryImg from '../images/capaprincipal2png.png'
+import courseCoverImg from '../images/capadocurso.jpg'
 
 export const languages = [
+  { code: 'pt', label: 'Português', flag: 'BR' },
   { code: 'en', label: 'English', flag: 'GB' },
   { code: 'es', label: 'Español', flag: 'ES' },
-  { code: 'pt', label: 'Português', flag: 'BR' }
+  { code: 'fr', label: 'Français', flag: 'FR' },
+  { code: 'it', label: 'Italiano', flag: 'IT' },
+  { code: 'zh-CN', label: '中文', flag: 'CN' },
+  { code: 'mn', label: 'Монгол', flag: 'MN' }
 ]
 
 export const baseContent = {
@@ -15,10 +20,58 @@ export const baseContent = {
   hero: {
     slides: [
       {
-        title: 'Como levei minha família pra Irlanda sem agência',
-        subtitle: 'Descubra o passo a passo que usamos pra morar, estudar e trabalhar legalmente fora do Brasil economizando mais de R$20.000.',
-        cta: 'Quero o MOVE por R$67',
-        image: heroPrimaryImg
+        id: 'move-essential',
+        title: 'MOVE Essencial',
+        tagline: 'Tudo que você precisa para embarcar com autonomia',
+        description: 'Checklist, roteiro completo, modelos prontos e planilha financeira para você planejar a mudança internacional com segurança.',
+        price: {
+          main: 'R$67',
+          note: 'Valor promocional de lançamento'
+        },
+        features: [
+          'Acesso vitalício ao kit completo',
+          'Atualizações gratuitas em 2025',
+          'Garantia incondicional de 7 dias'
+        ],
+        cta: 'Garantir acesso agora',
+        image: courseCoverImg,
+        imageAlt: 'Capa do curso MOVE Essencial'
+      },
+      {
+        id: 'move-family',
+        title: 'MOVE Family Pack',
+        tagline: 'Para casais, mães solo e famílias que querem clareza',
+        description: 'Inclui o MOVE Essencial + cronograma adaptado para famílias, modelos de planilhas extras e guia de escolas infantis.',
+        price: {
+          main: 'R$129',
+          note: 'Possibilidade de parcelamento em até 6x'
+        },
+        features: [
+          'Planilha financeira familiar',
+          'Guia de adaptação para crianças',
+          'Modelos de comunicação com escolas'
+        ],
+        cta: 'Quero o Family Pack',
+        image: heroPrimaryImg,
+        imageAlt: 'Família celebrando viagem com o MOVE'
+      },
+      {
+        id: 'move-mentorship',
+        title: 'MOVE + Mentoria Express',
+        tagline: 'Acompanhamento direto em uma sessão estratégica de 60 minutos',
+        description: 'Receba o kit completo + mentoria individual para revisar documentos, cronograma e tirar dúvidas ao vivo.',
+        price: {
+          main: 'R$297',
+          note: 'Agenda semanal com vagas limitadas'
+        },
+        features: [
+          'Sessão 1:1 de 60 minutos',
+          'Checklist personalizado pós-mentoria',
+          'Suporte por e-mail por 7 dias'
+        ],
+        cta: 'Aplicar para mentoria',
+        image: courseCoverImg,
+        imageAlt: 'Sessão de mentoria do MOVE'
       }
     ],
     ctaLink: '#cta-primary'

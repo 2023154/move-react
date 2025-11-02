@@ -1,32 +1,75 @@
 export function HeroSlider({ slides }) {
   return (
     <div className="relative overflow-hidden">
-      <div className="flex snap-x snap-mandatory overflow-x-auto scrollbar-hide">
-        {slides.map((slide, index) => (
+      <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 py-8 scrollbar-hide">
+        {slides.map((slide) => (
           <section
-            key={index}
-            className="relative flex min-h-[70vh] min-w-full snap-center items-center justify-center bg-gradient-to-br from-night via-surface to-night px-4 py-16"
-            style={slide.image ? {
-              backgroundImage: `linear-gradient(135deg, rgba(11, 17, 32, 0.85), rgba(11, 17, 32, 0.6)), url(${slide.image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-            } : undefined}
+            key={slide.id ?? slide.title}
+            className="relative min-w-[92%] snap-center rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-night via-surface to-night p-6 text-slate-100 shadow-2xl transition-transform duration-300 ease-out hover:-translate-y-1 md:min-w-[70%]"
           >
-            <div className="glass-panel max-w-2xl rounded-3xl border border-white/10 bg-black/40 p-8 text-center shadow-2xl backdrop-blur">
-              <h1 className="text-4xl font-semibold uppercase tracking-widest text-accent md:text-5xl">
-                {slide.title}
-              </h1>
-              <p className="mt-4 text-base text-slate-200 md:text-lg">{slide.subtitle}</p>
-              <a
-                href={slide.ctaLink ?? '#courses'}
-                className="mt-8 inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 font-semibold uppercase tracking-wide text-night shadow-glow transition hover:bg-emerald-500"
-              >
-                {slide.cta}
-              </a>
+            <div className="grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
+              <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-night/60">
+                {slide.image && (
+                  <img
+                    src={slide.image}
+                    alt={slide.imageAlt ?? slide.title}
+                    className="h-full w-full object-cover object-center"
+                    loading="lazy"
+                  />
+                )}
+                {slide.price?.main && (
+                  <div className="absolute bottom-4 right-4 rounded-full bg-accent/95 px-4 py-2 text-night shadow-glow">
+                    <span className="text-sm font-semibold">{slide.price.main}</span>
+                  </div>
+                )}
+              </div>
+
+              <div className="flex flex-col gap-4">
+                {slide.tagline && <span className="text-xs uppercase tracking-[0.35em] text-accent/80">{slide.tagline}</span>}
+                <div>
+                  <h1 className="text-3xl font-semibold md:text-4xl">{slide.title}</h1>
+                  {slide.description && <p className="mt-3 text-balance text-sm text-slate-200 md:text-base">{slide.description}</p>}
+                </div>
+
+                {Array.isArray(slide.features) && slide.features.length > 0 && (
+                  <ul className="grid gap-2 text-sm text-slate-200 md:grid-cols-2">
+                    {slide.features.map((feature, index) => (
+                      <li key={index} className="flex items-start gap-2 rounded-xl border border-white/5 bg-white/5 p-3">
+                        <span className="mt-1 h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                {slide.price?.note && (
+                  <p className="text-xs font-medium uppercase tracking-wide text-accent/80">
+                    {slide.price.note}
+                  </p>
+                )}
+
+                <div className="mt-auto flex flex-wrap items-center gap-4 pt-2">
+                  {slide.price?.main && (
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-4xl font-bold text-accent md:text-5xl">{slide.price.main}</span>
+                      <span className="text-xs uppercase tracking-[0.4em] text-slate-300">MOVE</span>
+                    </div>
+                  )}
+                  <a
+                    href={slide.ctaLink ?? '#courses'}
+                    className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-night shadow-glow transition hover:bg-emerald-500"
+                  >
+                    {slide.cta}
+                  </a>
+                </div>
+              </div>
             </div>
           </section>
         ))}
       </div>
+
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-night via-night/50 to-transparent" aria-hidden />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-night via-night/30 to-transparent" aria-hidden />
     </div>
   )
 }

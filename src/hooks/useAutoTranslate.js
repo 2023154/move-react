@@ -18,7 +18,7 @@ const translateText = async (text, targetLang) => {
   if (translationCache.has(key)) return translationCache.get(key)
 
   try {
-    const response = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=${targetLang}&dt=t&q=${encodeURIComponent(text)}`)
+    const response = await fetch(`https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLang}&dt=t&q=${encodeURIComponent(text)}`)
     if (!response.ok) throw new Error('Translation request failed')
     const data = await response.json()
     const translated = Array.isArray(data?.[0]) ? data[0].map((item) => item[0]).join('') : text
@@ -73,7 +73,7 @@ export const useAutoTranslate = (baseContent, targetLang) => {
 
   useEffect(() => {
     let cancelled = false
-    if (targetLang === 'en') {
+    if (targetLang === 'pt') {
       setTranslated(baseContent)
       setLoading(false)
       return
