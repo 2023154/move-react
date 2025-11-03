@@ -54,8 +54,10 @@ export function HeroSlider({ slides }) {
                       <span
                         className="text-4xl font-bold md:text-5xl"
                         style={{
-                          color: '#FF8200',
-                          textShadow: '0 0 3px #fff2cc, 0 0 6px #FF8200',
+                          background: 'linear-gradient(to bottom, #C2A46B, #9F845A)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          textShadow: '0 0 10px rgba(194, 164, 107, 0.6), 0 0 20px rgba(194, 164, 107, 0.4)',
                           letterSpacing: '0.01em',
                         }}
                       >
