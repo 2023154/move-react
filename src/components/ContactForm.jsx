@@ -58,7 +58,7 @@ export function ContactForm({ labels }) {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-accent"
+            className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-move-green"
         />
       </label>
       <label className="grid gap-2 text-sm font-semibold text-slate-200">
@@ -69,7 +69,7 @@ export function ContactForm({ labels }) {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-accent"
+            className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-move-green"
         />
       </label>
       <label className="grid gap-2 text-sm font-semibold text-slate-200">
@@ -80,13 +80,13 @@ export function ContactForm({ labels }) {
           value={formData.message}
           onChange={handleChange}
           required
-          className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-accent"
+            className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-move-green"
         />
       </label>
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="mt-2 inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-night transition hover:bg-emerald-500 disabled:cursor-not-allowed disabled:opacity-70"
+        className="mt-2 inline-flex items-center justify-center rounded-full bg-move-green metallic-effect px-6 py-3 text-sm font-semibold uppercase tracking-wide text-move-beige shadow-glow transition hover:bg-move-gold hover:text-move-gray-dark disabled:cursor-not-allowed disabled:opacity-70"
       >
         {status === 'loading' ? 'Enviando...' : formLabels.button}
       </button>
