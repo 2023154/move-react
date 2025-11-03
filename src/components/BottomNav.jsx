@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { FiHelpCircle, FiHome, FiGlobe } from 'react-icons/fi'
-import { FaCircleHalfStroke } from 'react-icons/fa6'
 
 const navItems = [
   { href: '#home', icon: FiHome },
@@ -8,7 +7,7 @@ const navItems = [
   { href: '#faq', icon: FiHelpCircle }
 ]
 
-export function BottomNav({ onThemeToggle }) {
+export function BottomNav() {
   const [active, setActive] = useState('#home')
 
   useEffect(() => {
@@ -33,14 +32,6 @@ export function BottomNav({ onThemeToggle }) {
           <Icon className="text-xl" />
         </a>
       ))}
-      <button
-        type="button"
-        onClick={onThemeToggle}
-  className="flex flex-1 flex-col items-center text-slate-400 transition hover:text-move-green"
-        aria-label="Toggle theme"
-      >
-        <FaCircleHalfStroke className="text-xl" />
-      </button>
     </nav>
   )
 }

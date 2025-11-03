@@ -1,5 +1,6 @@
 import { HeroSlider } from '../components/HeroSlider'
 import { LanguageButtons } from '../components/LanguageButtons'
+import { YoutubeEmbed } from '../components/YoutubeEmbed'
 import coverImage from '../images/capaprincipal2png.png'
 
 export function HomeScreen({ slides, ctaLink, languages, currentLanguage, onSelectLanguage, loading }) {
@@ -31,6 +32,7 @@ export function HomeScreen({ slides, ctaLink, languages, currentLanguage, onSele
           </div>
         </div>
       </div>
+      <YoutubeEmbed videoId="32zxszhtm4o" />
       <HeroSlider slides={sliderSlides} />
       <LanguageButtons languages={languages} active={currentLanguage} onSelect={onSelectLanguage} loading={loading} />
     </section>
