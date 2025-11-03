@@ -63,7 +63,7 @@ export function HeroSlider({ slides }) {
                       >
                         {slide.price.main}
                       </span>
-                      <span className="text-xs uppercase tracking-[0.4em] text-move-green">MOVE</span>
+                      <span className="text-xs uppercase tracking-[0.4em] text-white">MOVE</span>
                     </div>
                   )}
                   <a
