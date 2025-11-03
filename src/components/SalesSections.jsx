@@ -94,12 +94,12 @@ const FAQList = ({ items }) => (
 )
 
 const CtaCard = ({ id, title, text, buttonLabel, buttonHref = '#checkout', note }) => (
-  <section id={id} className="rounded-3xl border border-accent/60 bg-accent/10 p-8 text-center shadow-lg">
-  <h2 className="text-3xl font-semibold text-move-green">{title}</h2>
+  <section id={id} className="rounded-3xl border border-move-green/60 bg-[#b6f2ce] p-8 text-center shadow-lg">
+    <h2 className="text-3xl font-semibold text-move-green">{title}</h2>
     <p className="mt-3 text-base text-slate-200">{text}</p>
     <a
       href={buttonHref}
-      className="mt-6 inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-night transition hover:bg-emerald-500"
+      className="mt-6 inline-flex items-center justify-center rounded-full bg-move-green metallic-effect px-6 py-3 text-sm font-semibold uppercase tracking-wide text-move-beige shadow-glow transition hover:bg-move-gold hover:text-move-gray-dark"
     >
       {buttonLabel}
     </a>
