@@ -1,6 +1,6 @@
 import { FiHelpCircle, FiHome, FiGlobe } from 'react-icons/fi'
 import { FaCircleHalfStroke } from 'react-icons/fa6'
-import logo from '../images/Logo Design for MOVE Initiative.png'
+import logo from '../images/move-logo.png'
 
 const navItems = [
   { href: '#home', icon: FiHome, labelKey: 'home' },
