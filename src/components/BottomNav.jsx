@@ -29,14 +29,14 @@ export function BottomNav({ onThemeToggle }) {
   return (
     <nav className="fixed inset-x-0 bottom-0 z-40 flex items-center justify-around border-t border-white/10 bg-night/90 backdrop-blur py-3 text-slate-300 md:hidden">
       {navItems.map(({ href, icon: Icon }) => (
-        <a key={href} href={href} className={`flex flex-1 flex-col items-center text-sm transition ${active === href ? 'text-accent' : 'text-slate-400 hover:text-accent'}`}>
+  <a key={href} href={href} className={`flex flex-1 flex-col items-center text-sm transition ${active === href ? 'text-move-green' : 'text-slate-400 hover:text-move-green'}`}>
           <Icon className="text-xl" />
         </a>
       ))}
       <button
         type="button"
         onClick={onThemeToggle}
-        className="flex flex-1 flex-col items-center text-slate-400 transition hover:text-accent"
+  className="flex flex-1 flex-col items-center text-slate-400 transition hover:text-move-green"
         aria-label="Toggle theme"
       >
         <FaCircleHalfStroke className="text-xl" />

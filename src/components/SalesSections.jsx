@@ -29,9 +29,9 @@ const iconMap = {
 const Section = ({ id, title, eyebrow, children }) => (
   <section id={id} className="rounded-3xl border border-white/10 bg-surface/90 p-8 shadow-lg">
     {eyebrow ? (
-      <p className="text-xs font-semibold uppercase tracking-[0.3em] text-accent">{eyebrow}</p>
+  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-move-green">{eyebrow}</p>
     ) : null}
-    <h2 className="text-3xl font-semibold text-accent">{title}</h2>
+  <h2 className="text-3xl font-semibold text-move-green">{title}</h2>
     <div className="mt-4 space-y-4 text-base text-slate-200">{children}</div>
   </section>
 )
@@ -43,7 +43,7 @@ const BulletList = ({ items }) => (
       const Icon = iconMap[normalized.icon ?? 'check'] ?? FiCheckCircle
       return (
         <li key={index} className="flex items-start gap-3">
-          <Icon className="mt-1 shrink-0 text-accent" />
+          <Icon className="mt-1 shrink-0 text-move-green" />
           <span>{normalized.text}</span>
         </li>
       )
@@ -57,7 +57,7 @@ const FeatureGrid = ({ items }) => (
       const Icon = iconMap[item.icon ?? 'check'] ?? FiCheckCircle
       return (
         <div key={item.title} className="rounded-2xl border border-white/10 bg-black/30 p-6">
-          <div className="flex items-center gap-3 text-accent">
+          <div className="flex items-center gap-3 text-move-green">
             <Icon className="text-xl" />
             <h3 className="text-lg font-semibold text-slate-100">{item.title}</h3>
           </div>
@@ -73,7 +73,7 @@ const Testimonials = ({ items }) => (
     {items.map((item, index) => (
       <blockquote key={index} className="rounded-2xl border border-white/10 bg-black/30 p-6 text-sm text-slate-200">
         <p className="italic">"{item.quote}"</p>
-        <footer className="mt-4 text-right font-semibold text-accent">- {item.author}</footer>
+  <footer className="mt-4 text-right font-semibold text-move-green">- {item.author}</footer>
       </blockquote>
     ))}
   </div>
@@ -85,7 +85,7 @@ const FAQList = ({ items }) => (
       <details key={index} className="group rounded-2xl border border-white/10 bg-black/20 p-4">
         <summary className="flex cursor-pointer items-center justify-between text-left text-base font-semibold text-slate-100">
           {item.question}
-          <span className="text-accent transition group-open:rotate-45">+</span>
+          <span className="text-move-green transition group-open:rotate-45">+</span>
         </summary>
         <p className="mt-3 text-sm text-slate-300">{item.answer}</p>
       </details>
@@ -95,7 +95,7 @@ const FAQList = ({ items }) => (
 
 const CtaCard = ({ id, title, text, buttonLabel, buttonHref = '#checkout', note }) => (
   <section id={id} className="rounded-3xl border border-accent/60 bg-accent/10 p-8 text-center shadow-lg">
-    <h2 className="text-3xl font-semibold text-accent">{title}</h2>
+  <h2 className="text-3xl font-semibold text-move-green">{title}</h2>
     <p className="mt-3 text-base text-slate-200">{text}</p>
     <a
       href={buttonHref}
@@ -252,7 +252,7 @@ export function SalesSections({ sales }) {
           <p>
             {support.description}{' '}
             {support.email ? (
-              <a href={`mailto:${support.email}`} className="text-accent underline">
+              <a href={`mailto:${support.email}`} className="text-move-green underline">
                 {support.email}
               </a>
             ) : null}

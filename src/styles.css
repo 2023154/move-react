@@ -9,7 +9,18 @@
 
   body {
     font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    @apply bg-night text-slate-200;
+    @apply bg-move-gray-dark text-move-gray-light;
+    background-image: linear-gradient(to bottom right, #2F3B3C, #263032);
+  }
+
+  .metallic-effect {
+    @apply shadow-metallic transition-all duration-300;
+    background-blend-mode: overlay;
+  }
+
+  .metallic-effect:hover {
+    @apply shadow-metallic-hover;
+    filter: brightness(1.05);
   }
 }
 

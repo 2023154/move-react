@@ -5,7 +5,7 @@ export function HeroSlider({ slides }) {
         {slides.map((slide) => (
           <section
             key={slide.id ?? slide.title}
-            className="relative min-w-[92%] snap-center rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-night via-surface to-night p-6 text-slate-100 shadow-2xl transition-transform duration-300 ease-out hover:-translate-y-1 md:min-w-[70%]"
+            className="relative min-w-[92%] snap-center rounded-[2.5rem] border border-move-gray-light/10 bg-metallic-dark p-6 text-move-gray-light shadow-2xl metallic-effect transition-transform duration-300 ease-out hover:-translate-y-1 md:min-w-[70%]"
           >
             <div className="grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
               <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-night/60">
@@ -18,14 +18,14 @@ export function HeroSlider({ slides }) {
                   />
                 )}
                 {slide.price?.main && (
-                  <div className="absolute bottom-4 right-4 rounded-full bg-accent/95 px-4 py-2 text-night shadow-glow">
+                  <div className="absolute bottom-4 right-4 rounded-full bg-metallic-green px-4 py-2 text-move-beige shadow-glow metallic-effect">
                     <span className="text-sm font-semibold">{slide.price.main}</span>
                   </div>
                 )}
               </div>
 
               <div className="flex flex-col gap-4">
-                {slide.tagline && <span className="text-xs uppercase tracking-[0.35em] text-accent/80">{slide.tagline}</span>}
+                {slide.tagline && <span className="text-xs uppercase tracking-[0.35em] text-move-green">{slide.tagline}</span>}
                 <div>
                   <h1 className="text-3xl font-semibold md:text-4xl">{slide.title}</h1>
                   {slide.description && <p className="mt-3 text-balance text-sm text-slate-200 md:text-base">{slide.description}</p>}
@@ -43,7 +43,7 @@ export function HeroSlider({ slides }) {
                 )}
 
                 {slide.price?.note && (
-                  <p className="text-xs font-medium uppercase tracking-wide text-accent/80">
+                  <p className="text-xs font-medium uppercase tracking-wide text-move-green">
                     {slide.price.note}
                   </p>
                 )}
@@ -51,13 +51,13 @@ export function HeroSlider({ slides }) {
                 <div className="mt-auto flex flex-wrap items-center gap-4 pt-2">
                   {slide.price?.main && (
                     <div className="flex items-baseline gap-2">
-                      <span className="text-4xl font-bold text-accent md:text-5xl">{slide.price.main}</span>
-                      <span className="text-xs uppercase tracking-[0.4em] text-slate-300">MOVE</span>
+                      <span className="text-4xl font-bold md:text-5xl" style={{color: '#FF8200'}}>{slide.price.main}</span>
+                      <span className="text-xs uppercase tracking-[0.4em] text-move-green">MOVE</span>
                     </div>
                   )}
                   <a
                     href={slide.ctaLink ?? '#courses'}
-                    className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-night shadow-glow transition hover:bg-emerald-500"
+                    className="inline-flex items-center gap-2 rounded-full bg-move-green metallic-effect px-6 py-3 text-sm font-semibold uppercase tracking-wide text-move-beige shadow-glow transition hover:bg-move-gold hover:text-move-gray-dark"
                   >
                     {slide.cta}
                   </a>

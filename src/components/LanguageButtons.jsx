@@ -8,8 +8,8 @@ export function LanguageButtons({ languages, active, onSelect, loading }) {
           key={code}
           type="button"
           onClick={() => onSelect(code)}
-          className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition ${
-            active === code ? 'border-accent bg-accent text-night shadow-glow' : 'border-white/10 bg-white/5 text-slate-200 hover:border-accent hover:text-accent'
+          className={`flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition metallic-effect ${
+            active === code ? 'bg-metallic-gold border-move-gold text-move-gray-dark shadow-glow' : 'border-move-gray-light/10 bg-metallic-dark text-move-gray-light hover:border-move-gold hover:text-move-gold'
           }`}
         >
           <ReactCountryFlag svg countryCode={flag} className="text-base" />
