@@ -1,3 +1,5 @@
+import { useMemo, useState } from 'react'
+
 const defaultLabels = {
   name: 'Nome',
   email: 'E-mail',
@@ -6,29 +8,94 @@ const defaultLabels = {
 }
 
 export function ContactForm({ labels }) {
-  const formLabels = { ...defaultLabels, ...labels }
+  const formLabels = useMemo(() => ({ ...defaultLabels, ...labels }), [labels])
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [status, setStatus] = useState('idle')
+  const [error, setError] = useState('')
+
+  const endpoint = useMemo(
+    () => import.meta.env.VITE_CONTACT_ENDPOINT || 'http://localhost:4000/contact',
+    []
+  )
+
+  const handleChange = (event) => {
+    const { name, value } = event.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    setStatus('loading')
+    setError('')
+
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+
+      if (!response.ok) {
+        throw new Error('send_failed')
+      }
+
+      setStatus('success')
+      setFormData({ name: '', email: '', message: '' })
+    } catch (err) {
+      console.error('Failed to submit contact form', err)
+      setStatus('error')
+      setError('Não foi possível enviar sua mensagem. Tente novamente em instantes.')
+    }
+  }
+
   return (
-    <form
-      onSubmit={(event) => {
-        event.preventDefault()
-      }}
-      className="grid gap-4"
-    >
+    <form onSubmit={handleSubmit} className="grid gap-4">
       <label className="grid gap-2 text-sm font-semibold text-slate-200">
         {formLabels.name}
-        <input type="text" required className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-accent" />
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+          className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-accent"
+        />
       </label>
       <label className="grid gap-2 text-sm font-semibold text-slate-200">
         {formLabels.email}
-        <input type="email" required className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-accent" />
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+          className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-accent"
+        />
       </label>
       <label className="grid gap-2 text-sm font-semibold text-slate-200">
         {formLabels.message}
-        <textarea rows="5" required className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-accent" />
+        <textarea
+          rows="5"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+          className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-accent"
+        />
       </label>
-      <button type="submit" className="mt-2 inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-night transition hover:bg-emerald-500">
-        {formLabels.button}
+      <button
+        type="submit"
+        disabled={status === 'loading'}
+        className="mt-2 inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-wide text-night transition hover:bg-emerald-500 disabled:cursor-not-allowed disabled:opacity-70"
+      >
+        {status === 'loading' ? 'Enviando...' : formLabels.button}
       </button>
+      {status === 'success' && (
+        <p className="text-sm font-medium text-move-green">Mensagem enviada! Verifique seu e-mail para nossa resposta.</p>
+      )}
+      {status === 'error' && (
+        <p className="text-sm font-medium text-red-400">{error}</p>
+      )}
     </form>
   )
 }
