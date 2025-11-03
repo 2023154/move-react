@@ -256,6 +256,17 @@ export const baseContent = {
       responseTime: 'Atendimento de segunda a sexta, em até 48h úteis.'
     }
   },
+  contact: {
+    title: 'Fale com a equipe MOVE',
+    subtitle: 'Responderemos em até 24 horas com orientações personalizadas para a sua jornada internacional.',
+    disclaimer: 'Ao enviar a mensagem, você concorda em receber nosso retorno por e-mail.',
+    form: {
+      name: 'Seu nome completo',
+      email: 'Seu e-mail',
+      message: 'Como podemos te ajudar?',
+      button: 'Enviar mensagem'
+    }
+  },
   footer: {
     title: 'Siga nas redes',
     links: [

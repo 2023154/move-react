@@ -4,6 +4,7 @@ import { BottomNav } from './components/BottomNav'
 import { HomeScreen } from './screens/Home'
 import { SalesSections } from './components/SalesSections'
 import { Footer } from './components/Footer'
+import { ContactScreen } from './screens/Contact'
 import { baseContent, languages } from './data/content'
 import { useAutoTranslate } from './hooks/useAutoTranslate'
 
@@ -77,6 +78,7 @@ export default function App() {
           loading={loading}
         />
         <SalesSections sales={content.sales} />
+        <ContactScreen contact={content.contact} />
       </main>
 
       <Footer footer={content.footer} />
