@@ -35,7 +35,7 @@ export function HeroSlider({ slides }) {
                   <ul className="grid gap-2 text-sm text-slate-200 md:grid-cols-2">
                     {slide.features.map((feature, index) => (
                       <li key={index} className="flex items-start gap-2 rounded-xl border border-white/5 bg-white/5 p-3">
-                        <span className="mt-1 h-1.5 w-1.5 rounded-full bg-accent" aria-hidden />
+                        <span className="mt-1 h-1.5 w-1.5 rounded-full bg-move-green" aria-hidden />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -51,8 +51,19 @@ export function HeroSlider({ slides }) {
                 <div className="mt-auto flex flex-wrap items-center gap-4 pt-2">
                   {slide.price?.main && (
                     <div className="flex items-baseline gap-2">
-                      <span className="text-4xl font-bold md:text-5xl" style={{color: '#FF8200'}}>{slide.price.main}</span>
-                      <span className="text-xs uppercase tracking-[0.4em] text-move-green">MOVE</span>
+                      <span
+                        className="text-4xl font-bold md:text-5xl"
+                        style={{
+                          background: 'linear-gradient(to bottom, #C2A46B, #9F845A)',
+                          WebkitBackgroundClip: 'text',
+                          WebkitTextFillColor: 'transparent',
+                          textShadow: '0 0 10px rgba(194, 164, 107, 0.6), 0 0 20px rgba(194, 164, 107, 0.4)',
+                          letterSpacing: '0.01em',
+                        }}
+                      >
+                        {slide.price.main}
+                      </span>
+                      <span className="text-xs uppercase tracking-[0.4em] text-white">MOVE</span>
                     </div>
                   )}
                   <a

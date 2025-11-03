@@ -8,11 +8,6 @@ import { ContactScreen } from './screens/Contact'
 import { baseContent, languages } from './data/content'
 import { useAutoTranslate } from './hooks/useAutoTranslate'
 
-const prefersLight = () => {
-  if (typeof window === 'undefined') return false
-  return window.matchMedia?.('(prefers-color-scheme: light)')?.matches
-}
-
 const getInitialLang = () => {
   if (typeof navigator === 'undefined') return 'pt'
   const browserLang = (navigator.language || 'pt').toLowerCase()
@@ -44,15 +39,8 @@ const writeStorage = (key, value) => {
 }
 
 export default function App() {
-  const [theme, setTheme] = useState(() => readStorage('theme', prefersLight() ? 'light' : 'dark'))
   const [language, setLanguage] = useState(() => readStorage('language', getInitialLang()))
-
   const { content, loading } = useAutoTranslate(baseContent, language)
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', theme)
-    writeStorage('theme', theme)
-  }, [theme])
 
   useEffect(() => {
     document.documentElement.lang = language
@@ -62,11 +50,8 @@ export default function App() {
   const navLabels = useMemo(() => content.nav, [content])
 
   return (
-    <div className={`min-h-screen bg-gradient-to-b ${theme === 'dark' ? 'from-night via-surface to-night text-slate-100' : 'from-slate-100 via-white to-slate-100 text-slate-900'} transition-colors duration-500`}>
-      <Header
-        labels={navLabels}
-        onThemeToggle={() => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))}
-      />
+    <div className="min-h-screen bg-gradient-to-b from-night via-surface to-night text-slate-100">
+      <Header labels={navLabels} />
 
       <main className="pb-32">
         <HomeScreen
@@ -82,7 +67,7 @@ export default function App() {
       </main>
 
       <Footer footer={content.footer} />
-      <BottomNav onThemeToggle={() => setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))} />
+      <BottomNav />
     </div>
   )
 }

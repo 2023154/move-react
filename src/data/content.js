@@ -272,7 +272,8 @@ export const baseContent = {
     links: [
       { label: 'GitHub', url: 'https://github.com/2023154', icon: 'FaGithub' },
       { label: 'Facebook', url: 'https://www.facebook.com/forbarbering', icon: 'FaFacebook' },
-      { label: 'Instagram', url: 'https://www.instagram.com', icon: 'FaInstagram' }
+      { label: 'Instagram', url: 'https://www.instagram.com', icon: 'FaInstagram' },
+      { label: 'YouTube', url: 'https://www.youtube.com', icon: 'FaYoutube' }
     ]
   }
 }

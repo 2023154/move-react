@@ -1,5 +1,6 @@
 import { HeroSlider } from '../components/HeroSlider'
 import { LanguageButtons } from '../components/LanguageButtons'
+import { YoutubeEmbed } from '../components/YoutubeEmbed'
 import coverImage from '../images/capaprincipal2png.png'
 
 export function HomeScreen({ slides, ctaLink, languages, currentLanguage, onSelectLanguage, loading }) {
@@ -18,7 +19,7 @@ export function HomeScreen({ slides, ctaLink, languages, currentLanguage, onSele
         <div className="absolute inset-0 z-10 flex items-center justify-center px-4">
           <div className="w-full max-w-5xl">
             <div className="max-w-xl rounded-[2.5rem] border border-white/40 bg-night/70 px-6 py-8 text-slate-100 shadow-2xl backdrop-blur-sm md:px-10 md:py-12">
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-accent/80">
+              <p className="text-xs font-extrabold uppercase tracking-[0.35em] text-move-green [text-shadow:_0_0_1px_rgb(255_255_255_/_20%),_0_0_1px_rgb(255_255_255_/_20%)] relative">
                 {primarySlide.tagline ?? 'Seu plano MOVE começa aqui'}
               </p>
               <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
@@ -31,6 +32,7 @@ export function HomeScreen({ slides, ctaLink, languages, currentLanguage, onSele
           </div>
         </div>
       </div>
+      <YoutubeEmbed videoId="32zxszhtm4o" />
       <HeroSlider slides={sliderSlides} />
       <LanguageButtons languages={languages} active={currentLanguage} onSelect={onSelectLanguage} loading={loading} />
     </section>

@@ -1,9 +1,10 @@
-import { FaFacebook, FaGithub, FaInstagram } from 'react-icons/fa6'
+import { FaFacebook, FaGithub, FaInstagram, FaYoutube } from 'react-icons/fa6'
 
 const iconMap = {
   FaGithub: FaGithub,
   FaFacebook: FaFacebook,
-  FaInstagram: FaInstagram
+  FaInstagram: FaInstagram,
+  FaYoutube: FaYoutube
 }
 
 export function Footer({ footer }) {
@@ -20,7 +21,7 @@ export function Footer({ footer }) {
                   href={url}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 transition hover:border-accent hover:text-accent"
+                  className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 transition hover:border-move-gold hover:text-move-gold"
                 >
                   <Icon className="text-lg" />
                   <span>{label}</span>

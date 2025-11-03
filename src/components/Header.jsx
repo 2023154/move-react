@@ -1,5 +1,4 @@
 import { FiHelpCircle, FiHome, FiGlobe } from 'react-icons/fi'
-import { FaCircleHalfStroke } from 'react-icons/fa6'
 import logo from '../images/move-logo.png'
 
 const navItems = [
@@ -8,7 +7,7 @@ const navItems = [
   { href: '#faq', icon: FiHelpCircle, labelKey: 'faq' }
 ]
 
-export function Header({ labels, onThemeToggle }) {
+export function Header({ labels }) {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-move-gray-light/10 bg-metallic-dark backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-6 text-sm sm:text-base">
@@ -23,14 +22,6 @@ export function Header({ labels, onThemeToggle }) {
             </a>
           ))}
         </nav>
-        <button
-          type="button"
-          onClick={onThemeToggle}
-          className="metallic-effect rounded-full border border-move-gray-light/10 bg-metallic-green p-2 text-move-beige transition hover:text-move-gold"
-          aria-label="Toggle theme"
-        >
-          <FaCircleHalfStroke className="text-lg" />
-        </button>
       </div>
     </header>
   )
