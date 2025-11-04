@@ -8,33 +8,43 @@ export function HomeScreen({ slides, ctaLink, languages, currentLanguage, onSele
   const primarySlide = sliderSlides[0] ?? {}
   const primaryTitle = primarySlide.title ?? 'MOVE: transforme sua mudança internacional com autonomia'
   const primaryDescription = primarySlide.description ?? 'Organize documentos, finanças e cronograma da sua mudança com clareza, suporte e materiais atualizados.'
+  
   return (
-    <section id="home" className="pt-24">
-      <div className="relative w-full">
+    <section id="home" className="bg-night">
+      {/* Imagem Principal */}
+      <div className="relative h-[60vh] min-h-[400px] max-h-[650px] w-full overflow-hidden">
         <img
           src={coverImage}
-          alt="Capa principal MOVE"
-          className="h-[360px] w-full border border-white/10 object-cover object-center shadow-2xl md:h-[420px]"
+          alt="Main Cover"
+          className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 z-10 flex items-center justify-center px-4">
-          <div className="w-full max-w-5xl">
-            <div className="max-w-xl rounded-[2.5rem] border border-white/40 bg-night/70 px-6 py-8 text-slate-100 shadow-2xl backdrop-blur-sm md:px-10 md:py-12">
-              <p className="text-xs font-extrabold uppercase tracking-[0.35em] text-move-green [text-shadow:_0_0_1px_rgb(255_255_255_/_20%),_0_0_1px_rgb(255_255_255_/_20%)] relative">
-                {primarySlide.tagline ?? 'Seu plano MOVE começa aqui'}
-              </p>
-              <h2 className="mt-4 text-3xl font-semibold md:text-4xl">
-                {primaryTitle}
-              </h2>
-              <p className="mt-3 text-sm text-slate-100/90 md:text-base">
-                {primaryDescription}
-              </p>
-            </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-night/80 via-night/50 to-transparent"></div>
+        <div className="absolute inset-0 flex items-center justify-center p-4">
+          <div className="w-full max-w-4xl text-center">
+            <h1 className="text-4xl font-bold leading-tight text-white drop-shadow-lg md:text-6xl lg:text-7xl">
+              {primaryTitle}
+            </h1>
+            <p className="mt-4 text-lg text-slate-200 drop-shadow-md md:text-xl">
+              {primaryDescription}
+            </p>
           </div>
         </div>
       </div>
-      <LanguageButtons languages={languages} active={currentLanguage} onSelect={onSelectLanguage} loading={loading} />
-      <YoutubeEmbed videoId="32zxszhtm4o" />
-      <HeroSlider slides={sliderSlides} />
+
+      {/* Botões de Idioma */}
+      <div className="py-6">
+        <LanguageButtons languages={languages} active={currentLanguage} onSelect={onSelectLanguage} loading={loading} />
+      </div>
+
+      {/* Vídeo do YouTube */}
+      <div className="py-6">
+        <YoutubeEmbed videoId="32zxszhtm4o" />
+      </div>
+
+      {/* Slider de Cards */}
+      <div className="py-6">
+        <HeroSlider slides={sliderSlides} />
+      </div>
     </section>
   )
 }
