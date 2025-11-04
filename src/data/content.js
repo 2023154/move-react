@@ -1,10 +1,5 @@
 import heroPrimaryImg from '../images/capaprincipal2png.png'
 import courseCoverImg from '../images/capadocurso.jpg'
-import avatarPaula from '../images/paula.png'
-import avatarMarcio from '../images/marcio.png'
-import avatarGion from '../images/gion.jpg'
-import avatarRaimund from '../images/raimund.jpg'
-import avatarSilja from '../images/silja.jpg'
 
 export const languages = [
   { code: 'pt', label: 'Português', flag: 'BR' },
@@ -170,31 +165,31 @@ export const baseContent = {
           quote: 'Com o MOVE eu organizei tudo em menos de um mês. Já estou pronta para embarcar e gastei muito menos do que imaginei.',
           author: 'Paula M., Recife',
           rating: 5,
-          avatar: avatarPaula
+          avatar: 'https://randomuser.me/api/portraits/women/65.jpg'
         },
         {
           quote: 'O vídeo dos erros me salvou. Eu ia fazer tudo errado sem saber. Agora me sinto confiante para viajar.',
           author: 'Márcio L., Campinas',
           rating: 5,
-          avatar: avatarMarcio
+          avatar: 'https://randomuser.me/api/portraits/men/32.jpg'
         },
         {
           quote: 'A planilha financeira é incrível! Me deu a clareza que eu precisava para economizar e planejar cada centavo.',
           author: 'Gion B., Switzerland',
           rating: 5,
-          avatar: avatarGion
+          avatar: 'https://randomuser.me/api/portraits/men/35.jpg'
         },
         {
           quote: 'Nunca pensei que conseguiria planejar uma mudança para outro país sozinho. O roteiro passo a passo foi essencial.',
           author: 'Raimund M., Germany',
           rating: 5,
-          avatar: avatarRaimund
+          avatar: 'https://randomuser.me/api/portraits/men/41.jpg'
         },
         {
           quote: 'Como mãe, a segurança da minha família era minha maior preocupação. O MOVE me deu a confiança para dar esse passo.',
           author: 'Silja G., Norway',
           rating: 5,
-          avatar: avatarSilja
+          avatar: 'https://randomuser.me/api/portraits/women/58.jpg'
         }
       ]
     },
