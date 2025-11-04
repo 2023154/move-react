@@ -95,16 +95,16 @@ const FAQList = ({ items }) => (
 )
 
 const CtaCard = ({ id, title, text, buttonLabel, buttonHref = '#checkout', note }) => (
-  <section id={id} className="rounded-3xl border border-move-green/60 bg-[#b6f2ce] p-8 text-center shadow-lg">
-    <h2 className="text-3xl font-semibold text-move-green">{title}</h2>
-    <p className="mt-3 text-base text-slate-200">{text}</p>
+  <section id={id} className="rounded-3xl border border-move-green/40 bg-gradient-to-br from-[#c6f6d5] via-[#b6f2ce] to-[#a9e9c2] p-8 text-center shadow-lg">
+    <h2 className="text-3xl font-semibold text-[#0f5132]">{title}</h2>
+    <p className="mt-3 text-base text-[#1f5c42]">{text}</p>
     <a
       href={buttonHref}
-      className="mt-6 inline-flex items-center justify-center rounded-full bg-move-green metallic-effect px-6 py-3 text-sm font-semibold uppercase tracking-wide text-move-beige shadow-glow transition hover:bg-move-gold hover:text-move-gray-dark"
+      className="mt-6 inline-flex items-center justify-center rounded-full bg-move-green px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-move-green/30 transition hover:bg-[#0a7a4a]"
     >
       {buttonLabel}
     </a>
-    {note ? <p className="mt-3 text-xs uppercase tracking-wide text-slate-400">{note}</p> : null}
+    {note ? <p className="mt-3 text-xs uppercase tracking-wide text-[#2e6c4c]/80">{note}</p> : null}
   </section>
 )
 
