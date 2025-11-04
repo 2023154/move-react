@@ -9,17 +9,17 @@ import { baseContent, languages } from './data/content'
 import { useAutoTranslate } from './hooks/useAutoTranslate'
 
 const getInitialLang = () => {
-  if (typeof navigator === 'undefined') return 'pt'
-  const browserLang = (navigator.language || 'pt').toLowerCase()
-  if (browserLang.startsWith('pt')) return 'pt'
-  if (browserLang.startsWith('es')) return 'es'
-  if (browserLang.startsWith('fr')) return 'fr'
-  if (browserLang.startsWith('it')) return 'it'
-  if (browserLang.startsWith('zh')) return 'zh-CN'
-  if (browserLang.startsWith('mn')) return 'mn'
-  if (browserLang.startsWith('en')) return 'en'
-  return 'pt'
-}
+  if (typeof navigator === 'undefined') return 'pt';
+  const browserLang = (navigator.language || 'pt').toLowerCase();
+  // Find the most specific match first
+  const exactMatch = languages.find(l => browserLang === l.code.toLowerCase());
+  if (exactMatch) return exactMatch.code;
+  // Then check for partial matches (e.g., 'en-US' should match 'en')
+  const partialMatch = languages.find(l => browserLang.startsWith(l.code.toLowerCase()));
+  if (partialMatch) return partialMatch.code;
+  // Default to Portuguese
+  return 'pt';
+};
 
 const readStorage = (key, fallback) => {
   try {
@@ -53,7 +53,7 @@ export default function App() {
     <div className="min-h-screen bg-gradient-to-b from-night via-surface to-night text-slate-100">
       <Header labels={navLabels} />
 
-      <main className="pb-32">
+      <main className="space-y-12 md:space-y-16">
         <HomeScreen
           slides={content.hero.slides}
           ctaLink={content.hero.ctaLink}

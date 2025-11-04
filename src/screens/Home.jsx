@@ -29,14 +29,16 @@ export function HomeScreen({ slides, ctaLink, languages, currentLanguage, onSele
         </div>
       </div>
 
-      <LanguageButtons languages={languages} active={currentLanguage} onSelect={onSelectLanguage} loading={loading} />
+      <div className="space-y-8 md:space-y-12">
+        <LanguageButtons languages={languages} active={currentLanguage} onSelect={onSelectLanguage} loading={loading} />
 
-      <div className="bg-night py-12 md:py-16">
-        <YoutubeEmbed videoId="32zxszhtm4o" />
-      </div>
+        <div className="bg-night py-8 md:py-10">
+          <YoutubeEmbed videoId="32zxszhtm4o" />
+        </div>
 
-      <div className="bg-night py-12 md:py-16">
-        <HeroSlider slides={sliderSlides} />
+        <div>
+          <HeroSlider slides={sliderSlides} />
+        </div>
       </div>
     </section>
   )

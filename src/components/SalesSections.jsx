@@ -1,3 +1,4 @@
+import { TestimonialSlider } from './TestimonialSlider'
 import {
   FiCheckCircle,
   FiClipboard,
@@ -130,7 +131,7 @@ export function SalesSections({ sales }) {
   } = sales
 
   return (
-    <div id="details" className="mx-auto mt-16 max-w-5xl space-y-12 px-4">
+    <div id="details" className="mx-auto max-w-5xl space-y-12 px-4 md:space-y-16">
       {problem ? (
         <Section id="problem" title={problem.title}>
           <BulletList items={problem.bullets} />
@@ -177,7 +178,7 @@ export function SalesSections({ sales }) {
 
       {testimonials ? (
         <Section id="prova-social" title={testimonials.title}>
-          <Testimonials items={testimonials.items} />
+          <TestimonialSlider testimonials={testimonials} />
         </Section>
       ) : null}
 

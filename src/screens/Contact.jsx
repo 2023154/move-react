@@ -6,7 +6,7 @@ export function ContactScreen({ contact }) {
   const disclaimer = contact?.disclaimer
 
   return (
-    <section id="contact" className="mx-auto mt-20 max-w-4xl px-4">
+    <section id="contact" className="mx-auto max-w-4xl px-4">
       <div className="metallic-effect rounded-3xl border border-move-gray-light/10 bg-metallic-dark p-8 shadow-2xl md:p-10">
         <h2 className="text-center text-3xl font-semibold text-move-gold">{title}</h2>
         {subtitle && (
