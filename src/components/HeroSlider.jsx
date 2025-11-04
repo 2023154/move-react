@@ -1,11 +1,11 @@
 export function HeroSlider({ slides }) {
   return (
     <div className="relative overflow-hidden">
-      <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 py-8 scrollbar-hide">
+      <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 py-8 scrollbar-hide md:gap-6 md:px-6">
         {slides.map((slide) => (
           <section
             key={slide.id ?? slide.title}
-            className="relative min-w-[92%] snap-center rounded-[2.5rem] border border-move-gray-light/10 bg-metallic-dark p-6 text-move-gray-light shadow-2xl metallic-effect transition-transform duration-300 ease-out hover:-translate-y-1 md:min-w-[70%]"
+            className="relative min-w-[90%] snap-center rounded-[2.5rem] border border-move-gray-light/10 bg-metallic-dark p-6 text-move-gray-light shadow-2xl metallic-effect transition-transform duration-300 ease-out hover:-translate-y-1 md:min-w-[70%]"
           >
             <div className="grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
               <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-night/60">
