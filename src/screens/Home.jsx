@@ -8,8 +8,9 @@ export function HomeScreen({ slides, ctaLink, languages, currentLanguage, onSele
   const primarySlide = sliderSlides[0] ?? {}
   const primaryTitle = primarySlide.title ?? 'MOVE: transforme sua mudança internacional com autonomia'
   const primaryDescription = primarySlide.description ?? 'Organize documentos, finanças e cronograma da sua mudança com clareza, suporte e materiais atualizados.'
+
   return (
-    <section id="home" className="relative text-white">
+    <section id="home" className="relative bg-night text-white">
       <div className="relative h-[60vh] min-h-[400px] max-h-[650px] w-full overflow-hidden">
         <img
           src={coverImage}
@@ -29,16 +30,10 @@ export function HomeScreen({ slides, ctaLink, languages, currentLanguage, onSele
         </div>
       </div>
 
-      <div className="space-y-8 md:space-y-12">
+      <div className="space-y-8 px-4 pb-12 pt-8 md:space-y-12 md:px-8 md:pb-16 md:pt-12">
         <LanguageButtons languages={languages} active={currentLanguage} onSelect={onSelectLanguage} loading={loading} />
-
-        <div className="bg-night py-8 md:py-10">
-          <YoutubeEmbed videoId="32zxszhtm4o" />
-        </div>
-
-        <div>
-          <HeroSlider slides={sliderSlides} />
-        </div>
+        <YoutubeEmbed videoId="32zxszhtm4o" />
+        <HeroSlider slides={sliderSlides} />
       </div>
     </section>
   )
