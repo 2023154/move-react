@@ -45,3 +45,14 @@
     box-shadow: 0 15px 45px rgba(6, 182, 212, 0.25);
   }
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
