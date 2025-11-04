@@ -1,7 +1,9 @@
-export function YoutubeEmbed({ videoId }) {
+export function YoutubeEmbed({ videoId, children }) {
   return (
     <div className="relative w-full mt-8 mb-8 px-4">
       <div className="relative max-w-5xl mx-auto">
+        {/* container for overlays (children should be absolutely positioned) */}
+        {children}
         <div className="relative pb-[56.25%]">
           <iframe
             src={`https://www.youtube.com/embed/${videoId}`}

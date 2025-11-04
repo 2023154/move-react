@@ -32,9 +32,9 @@ export function HomeScreen({ slides, ctaLink, languages, currentLanguage, onSele
           </div>
         </div>
       </div>
+      <LanguageButtons languages={languages} active={currentLanguage} onSelect={onSelectLanguage} loading={loading} />
       <YoutubeEmbed videoId="32zxszhtm4o" />
       <HeroSlider slides={sliderSlides} />
-      <LanguageButtons languages={languages} active={currentLanguage} onSelect={onSelectLanguage} loading={loading} />
     </section>
   )
 }
