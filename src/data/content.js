@@ -7,295 +7,224 @@ export const languages = [
   { code: 'es', label: 'Español', flag: 'ES' },
   { code: 'fr', label: 'Français', flag: 'FR' },
   { code: 'it', label: 'Italiano', flag: 'IT' },
-  { code: 'zh-CN', label: '中文', flag: 'CN' },
-  { code: 'mn', label: 'Монгол', flag: 'MN' }
+  { code: 'zh-CN', label: '中文', flag: 'CN' }
 ]
 
 export const baseContent = {
   nav: {
     home: 'Início',
-    details: 'Conteúdo',
+    details: 'Serviços',
     faq: 'FAQ'
   },
   hero: {
     slides: [
       {
-        id: 'move-essential',
-        title: 'MOVE Essencial',
-        tagline: 'Tudo que você precisa para embarcar com autonomia',
-        description: 'Checklist, roteiro completo, modelos prontos e planilha financeira para você planejar a mudança internacional com segurança.',
+        id: 'web-design',
+        title: 'Websites de Alta Performance',
+        tagline: 'Sua vitrine digital 24/7',
+        description: 'Desenvolvemos sites modernos, rápidos e otimizados para converter visitantes em clientes reais. Design responsivo para todos os dispositivos.',
         price: {
-          main: 'R$67',
-          note: 'Valor promocional de lançamento'
+          main: 'PRO',
+          note: 'Consultoria gratuita inclusa'
         },
         features: [
-          'Acesso vitalício ao kit completo',
-          'Atualizações gratuitas em 2025',
-          'Garantia incondicional de 7 dias'
+          'Design Exclusivo e Moderno',
+          'Otimização para SEO (Google)',
+          'Painel de Controle Intuitivo'
         ],
-        cta: 'Garantir acesso agora',
+        cta: 'Solicitar Orçamento',
         image: courseCoverImg,
-        imageAlt: 'Capa do curso MOVE Essencial'
+        imageAlt: 'Desenvolvimento de Websites Profissionais'
       },
       {
-        id: 'move-family',
-        title: 'MOVE Family Pack',
-        tagline: 'Para casais, mães solo e famílias que querem clareza',
-        description: 'Inclui o MOVE Essencial + cronograma adaptado para famílias, modelos de planilhas extras e guia de escolas infantis.',
+        id: 'systems',
+        title: 'Sistemas e Plataformas',
+        tagline: 'Automação e Gestão Inteligente',
+        description: 'Criamos sistemas internos, CRMs e plataformas personalizadas para gerir o seu negócio com eficiência e escala.',
         price: {
-          main: 'R$129',
-          note: 'Possibilidade de parcelamento em até 6x'
+          main: 'TECH',
+          note: 'Soluções escaláveis'
         },
         features: [
-          'Planilha financeira familiar',
-          'Guia de adaptação para crianças',
-          'Modelos de comunicação com escolas'
+          'Automação de Processos',
+          'Dashboards em Tempo Real',
+          'Segurança de Dados'
         ],
-        cta: 'Quero o Family Pack',
+        cta: 'Ver Soluções',
         image: heroPrimaryImg,
-        imageAlt: 'Família celebrando viagem com o MOVE'
+        imageAlt: 'Sistemas Personalizados para Empresas'
       },
       {
-        id: 'move-mentorship',
-        title: 'MOVE + Mentoria Express',
-        tagline: 'Acompanhamento direto em uma sessão estratégica de 60 minutos',
-        description: 'Receba o kit completo + mentoria individual para revisar documentos, cronograma e tirar dúvidas ao vivo.',
+        id: 'traffic-social',
+        title: 'Tráfego Pago e Redes Sociais',
+        tagline: 'Escalando seu Faturamento',
+        description: 'Gestão completa de campanhas no Google e Meta Ads, aliada a um posicionamento estratégico nas redes sociais.',
         price: {
-          main: 'R$297',
-          note: 'Agenda semanal com vagas limitadas'
+          main: 'GROWTH',
+          note: 'Foco total em ROI'
         },
         features: [
-          'Sessão 1:1 de 60 minutos',
-          'Checklist personalizado pós-mentoria',
-          'Suporte por e-mail por 7 dias'
+          'Gestão de Anúncios (Ads)',
+          'Suporte em Redes Sociais',
+          'Relatórios de Performance'
         ],
-        cta: 'Aplicar para mentoria',
+        cta: 'Escalar meu Negócio',
         image: courseCoverImg,
-        imageAlt: 'Sessão de mentoria do MOVE'
+        imageAlt: 'Gestão de Tráfego e Social Media'
       }
     ],
-    ctaLink: '#cta-primary'
+    ctaLink: '#contact'
   },
   sales: {
     problem: {
-      title: 'Você quer sair do Brasil, mas...',
+      title: 'Sua empresa está enfrentando estes desafios?',
       bullets: [
-        'Se sente perdida ou perdido com tanta informação solta',
-        'Acha que só é possível com ajuda de agência cara',
-        'Tem medo de cometer erros burocráticos e perder dinheiro',
-        'Ainda não fala inglês fluente',
-        'Sonha com uma vida melhor, mas não sabe por onde começar'
+        'Site lento, antigo ou que não funciona no celular',
+        'Processos manuais que tomam todo o seu tempo',
+        'Redes sociais paradas e sem engajamento',
+        'Dificuldade em atrair novos clientes qualificados',
+        'Investimento em anúncios sem retorno claro'
       ]
     },
     solution: {
-      title: 'Foi por isso que criei o MOVE',
+      title: 'Transformamos sua Presença Digital',
       paragraphs: [
-        'O MOVE é um kit prático, direto e completo com tudo que você precisa para sair do Brasil e reconstruir sua vida na Europa, com foco em um dos destinos mais acessíveis e desejados: a Irlanda.',
-        'Todos os passos que eu e minha família seguimos estão organizados aqui: da decisão ao embarque, matrícula, emprego e adaptação. Mesmo que o seu destino seja Portugal, Alemanha ou Espanha, os pilares continuam válidos.'
+        'Somos uma agência focada em resultados reais. Não entregamos apenas design; entregamos ferramentas de crescimento. Unimos tecnologia de ponta com estratégias de marketing validadas para colocar sua empresa à frente da concorrência.',
+        'Desde a criação de um site institucional até sistemas complexos de gestão, nosso foco é simplificar sua operação e maximizar seus lucros através do digital.'
       ]
     },
     product: {
-      title: 'Dentro do MOVE você recebe acesso imediato a',
+      title: 'Nossa Stack de Soluções Profissionais',
       items: [
         {
+          icon: 'device',
+          title: 'Websites Premium',
+          description: 'Desenvolvimento focado em experiência do usuário e conversão imediata.'
+        },
+        {
           icon: 'clipboard',
-          title: 'Checklist completo',
-          description: 'Documentos, prazos e vistos organizados para você não esquecer nenhum passo.'
-        },
-        {
-          icon: 'compass',
-          title: 'Roteiro passo a passo',
-          description: 'Planejamento do zero ao embarque, incluindo matrícula, trabalho e adaptação.'
-        },
-        {
-          icon: 'file',
-          title: 'Modelos prontos',
-          description: 'Currículo e e-mail em inglês adaptáveis para diferentes perfis e objetivos.'
-        },
-        {
-          icon: 'video',
-          title: 'Vídeo exclusivo',
-          description: 'Os 5 erros mais comuns que fazem brasileiros perder dinheiro antes de embarcar.'
-        },
-        {
-          icon: 'list',
-          title: 'Lista de escolas e empregos',
-          description: 'Instituições confiáveis e plataformas atualizadas para multiplicar suas oportunidades.'
+          title: 'Sistemas Customizados',
+          description: 'Plataformas sob medida para resolver problemas específicos do seu negócio.'
         },
         {
           icon: 'chart',
-          title: 'Planilha financeira inteligente',
-          description: 'Saiba quanto guardar, quanto custa viver na Irlanda e como organizar cada gasto.'
+          title: 'Tráfego Pago (Ads)',
+          description: 'Campanhas estratégicas para levar as pessoas certas até o seu produto.'
+        },
+        {
+          icon: 'file',
+          title: 'Identidade Visual',
+          description: 'Criação de marcas e artes profissionais para manter sua empresa com um visual consistente.'
+        },
+        {
+          icon: 'shield',
+          title: 'Manutenção e Suporte',
+          description: 'Sua plataforma sempre online e segura com nosso monitoramento constante.'
+        },
+        {
+          icon: 'chart',
+          title: 'Consultoria de Growth',
+          description: 'Estratégias baseadas em dados para acelerar o crescimento e o ROI da sua empresa.'
         }
       ],
-      note: 'Conteúdo disponível imediatamente após a confirmação do pagamento.'
+      note: 'Cada projeto é único e recebe atenção personalizada da nossa equipe.'
     },
     benefits: {
-      title: 'Os resultados que você destrava',
+      title: 'Por que escolher nossa agência?',
       bullets: [
-        'Economize até R$20.000 evitando taxas de agência',
-        'Faça o processo com clareza, segurança e autonomia',
-        'Aplique materiais atualizados sem precisar começar do zero',
-        'Planeje tudo mesmo sem falar inglês fluente',
-        'Ideal para famílias, casais, mães solo ou mulheres viajando sozinhas'
+        'Aumente sua visibilidade e autoridade online',
+        'Automatize tarefas repetitivas com sistemas inteligentes',
+        'Atraia leads qualificados prontos para comprar',
+        'Suporte técnico rápido e humano',
+        'Design moderno que reflete a qualidade da sua empresa'
       ]
     },
     differentiators: {
-      title: 'Por que o MOVE é diferente',
+      title: 'Diferenciais que geram lucro',
       bullets: [
-        'Baseado em experiência real, nada de teoria distante da prática',
-        'Atualizado para 2025 com links e referências conferidos',
-        'Direto ao ponto para você não perder tempo',
-        'Alto valor percebido por um investimento acessível',
-        'Compatível com diferentes perfis: solo, casais e famílias'
+        'Foco total em ROI (Retorno sobre Investimento)',
+        'Tecnologias modernas e performáticas',
+        'Transparência total em relatórios de tráfego',
+        'Entregas ágeis e dentro do prazo',
+        'Expertise em diversos nichos de mercado'
       ]
     },
     primaryCta: {
       id: 'cta-primary',
-      title: 'Garanta seu acesso ao MOVE por R$67',
-      text: 'Clique no botão para garantir o kit completo agora mesmo e iniciar seu plano com segurança e autonomia.',
-      buttonLabel: 'Quero o MOVE por R$67',
-      buttonHref: '#checkout',
-      note: 'Pagamento seguro e liberação automática.'
+      title: 'Pronto para digitalizar seu negócio?',
+      text: 'Clique no botão abaixo para agendar uma consultoria gratuita e descobrir como podemos ajudar sua empresa a crescer.',
+      buttonLabel: 'Quero crescer meu negócio',
+      buttonHref: '#contact',
+      note: 'Consultoria estratégica sem compromisso.'
     },
     testimonials: {
-      title: 'Histórias de quem já está embarcando',
+      title: 'Quem confia em nosso trabalho',
       items: [
         {
-          quote: 'Com o MOVE eu organizei tudo em menos de um mês. Já estou pronta para embarcar e gastei muito menos do que imaginei.',
-          author: 'Paula M., Recife',
-          rating: 5,
-          avatar: 'https://randomuser.me/api/portraits/women/65.jpg'
-        },
-        {
-          quote: 'O vídeo dos erros me salvou. Eu ia fazer tudo errado sem saber. Agora me sinto confiante para viajar.',
-          author: 'Márcio L., Campinas',
+          quote: 'O novo sistema automatizou 40% das nossas tarefas diárias. Recuperamos tempo e aumentamos a precisão dos dados.',
+          author: 'Ricardo S., Diretor de Operações',
           rating: 5,
           avatar: 'https://randomuser.me/api/portraits/men/32.jpg'
         },
         {
-          quote: 'A planilha financeira é incrível! Me deu a clareza que eu precisava para economizar e planejar cada centavo.',
-          author: 'Gion B., Switzerland',
+          quote: 'Nosso faturamento dobrou após as campanhas de tráfego pago. O suporte nas redes sociais também fez toda a diferença.',
+          author: 'Mariana L., Empresária',
+          rating: 5,
+          avatar: 'https://randomuser.me/api/portraits/women/65.jpg'
+        },
+        {
+          quote: 'O site ficou incrível e muito rápido. Recebemos elogios dos clientes todos os dias pela facilidade de navegação.',
+          author: 'Carlos E., CEO TechStart',
           rating: 5,
           avatar: 'https://randomuser.me/api/portraits/men/35.jpg'
-        },
-        {
-          quote: 'Nunca pensei que conseguiria planejar uma mudança para outro país sozinho. O roteiro passo a passo foi essencial.',
-          author: 'Raimund M., Germany',
-          rating: 5,
-          avatar: 'https://randomuser.me/api/portraits/men/41.jpg'
-        },
-        {
-          quote: 'Como mãe, a segurança da minha família era minha maior preocupação. O MOVE me deu a confiança para dar esse passo.',
-          author: 'Silja G., Norway',
-          rating: 5,
-          avatar: 'https://randomuser.me/api/portraits/women/58.jpg'
         }
       ]
-    },
-    visualTips: {
-      title: 'Veja o MOVE em ação',
-      bullets: [
-        'Use mockups da checklist, planilha, roteiro e vídeo para reforçar o valor percebido',
-        'Mostre o MOVE em um notebook, celular e tablet para destacar a versatilidade',
-        'Inclua uma linha do tempo visual com as etapas do processo para facilitar a compreensão'
-      ]
-    },
-    authority: {
-      title: 'Quem criou o MOVE?',
-      paragraphs: [
-        'Sou mulher, mãe, esposa e profissional que sonhava com uma vida melhor para a minha família. Decidi fazer o caminho sozinha, sem agência, sem dinheiro sobrando e sem inglês fluente. E consegui.',
-        'Hoje moro na Irlanda com minha família e transformei essa experiência em um guia prático que eu mesma gostaria de ter tido. Se eu consegui, você também consegue. O MOVE existe para te acompanhar nessa jornada.'
-      ]
-    },
-    secondaryCta: {
-      id: 'cta-secundario',
-      title: 'Pronta para dar o primeiro passo?',
-      text: 'Garanta agora o acesso ao MOVE e comece a transformar sua vida com clareza e segurança.',
-      buttonLabel: 'Quero o MOVE por R$67',
-      buttonHref: '#checkout'
     },
     faq: {
       id: 'faq',
       title: 'Perguntas frequentes',
       items: [
         {
-          question: 'Preciso falar inglês fluente?',
-          answer: 'Não. O conteúdo te guia mesmo que você esteja começando do zero, com modelos e orientações para ganhar confiança.'
+          question: 'Quanto tempo leva para criar um site?',
+          answer: 'O prazo médio para um site institucional é de 15 a 30 dias, dependendo da complexidade e do envio de materiais.'
         },
         {
-          question: 'Esse kit serve só para a Irlanda?',
-          answer: 'O foco principal é a Irlanda porque vivi essa experiência, mas muitos passos também se aplicam a outros países da Europa.'
+          question: 'Vocês cuidam de tudo nas redes sociais?',
+          answer: 'Sim! Desde o planejamento de conteúdo, criação de artes, legendas e até a interação estratégica com o público.'
         },
         {
-          question: 'Tenho filhos. Serve para mim?',
-          answer: 'Sim. Levei minha família inteira e compartilho estratégias reais para quem viaja com crianças.'
+          question: 'O tráfego pago garante vendas?',
+          answer: 'O tráfego garante que pessoas qualificadas vejam sua oferta. A venda depende do conjunto: oferta, produto e atendimento.'
         },
         {
-          question: 'É um curso?',
-          answer: 'Não. É um kit prático com arquivos, modelos e orientações prontas para aplicar imediatamente.'
-        },
-        {
-          question: 'O kit tem garantia?',
-          answer: 'Sim. Você tem 7 dias para testar. Se não for para você, devolvemos o valor sem burocracia.'
+          question: 'Como funcionam os sistemas personalizados?',
+          answer: 'Analisamos suas dores de gestão e criamos uma ferramenta web sob medida para resolver esses problemas específicos.'
         }
       ]
     },
-    guarantee: {
-      title: 'Garantia incondicional de 7 dias',
-      text: 'Se o MOVE não fizer sentido para você dentro de 7 dias, basta enviar um e-mail e devolvemos todo o valor. Sem perguntas.'
-    },
-    bonuses: {
-      title: 'Bônus exclusivos',
-      bullets: [
-        'Lista de cidades acessíveis e seguras na Irlanda e na Europa',
-        'Guia de sites gratuitos para aprender inglês ou outros idiomas'
-      ]
-    },
-    urgency: {
-      title: 'Oferta especial de lançamento',
-      text: 'Apenas R$67 para as 100 primeiras alunas. Depois, o preço volta para R$97.'
-    },
-    finalCta: {
-      id: 'cta-final',
-      title: 'Garanta agora seu acesso por R$67',
-      text: 'Oferta válida enquanto durar o lote especial. Depois o valor sobe para R$97.',
-      buttonLabel: 'Quero o MOVE agora',
-      buttonHref: '#checkout'
-    },
-    compatibility: {
-      title: 'Compatibilidade e acessibilidade',
-      bullets: [
-        'Acesso 100% online em celular, tablet ou computador',
-        'Entrega imediata por e-mail após a confirmação',
-        'Acesso vitalício com atualizações gratuitas'
-      ]
-    },
     support: {
-      title: 'Suporte dedicado',
-      description: 'Dúvidas ou suporte? Escreva para',
-      email: 'contato@suaempresa.com',
-      responseTime: 'Atendimento de segunda a sexta, em até 48h úteis.'
+      title: 'Suporte e Contato',
+      description: 'Dúvidas ou novos projetos? Fale conosco em',
+      email: 'contatomoveeuropa@gmail.com',
+      responseTime: 'Atendimento prioritário para clientes ativos.'
     }
   },
   contact: {
-    title: 'Fale com a equipe MOVE',
-    subtitle: 'Responderemos em até 24 horas com orientações personalizadas para a sua jornada internacional.',
-    disclaimer: 'Ao enviar a mensagem, você concorda em receber nosso retorno por e-mail.',
+    title: 'Inicie seu Projeto Agora',
+    subtitle: 'Preencha o formulário abaixo e entraremos em contato para entender suas necessidades e propor a melhor solução.',
+    disclaimer: 'Seus dados estão seguros conosco e serão usados apenas para contato comercial.',
     form: {
-      name: 'Seu nome completo',
-      email: 'Seu e-mail',
-      message: 'Como podemos te ajudar?',
-      button: 'Enviar mensagem'
+      name: 'Seu nome ou nome da empresa',
+      email: 'Seu melhor e-mail',
+      message: 'Conte um pouco sobre seu projeto ou necessidade',
+      button: 'Enviar Solicitação'
     }
   },
   footer: {
-    title: 'Siga nas redes',
+    title: 'Conecte-se Conosco',
     links: [
-      { label: 'GitHub', url: 'https://github.com/2023154', icon: 'FaGithub' },
-      { label: 'Facebook', url: 'https://www.facebook.com/forbarbering', icon: 'FaFacebook' },
-      { label: 'Instagram', url: 'https://www.instagram.com', icon: 'FaInstagram' },
-      { label: 'YouTube', url: 'https://www.youtube.com', icon: 'FaYoutube' }
+      { label: 'Instagram', url: 'https://www.instagram.com/mundo_online_world/', icon: 'FaInstagram' },
+      { label: 'WhatsApp', url: 'https://wa.me/353834694919', icon: 'FaWhatsapp' }
     ]
   }
 }

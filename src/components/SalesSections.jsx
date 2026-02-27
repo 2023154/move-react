@@ -28,12 +28,12 @@ const iconMap = {
 }
 
 const Section = ({ id, title, eyebrow, children }) => (
-  <section id={id} className="rounded-3xl border border-white/10 bg-surface/90 p-8 shadow-lg">
+  <section id={id} className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
     {eyebrow ? (
-  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-move-green">{eyebrow}</p>
+  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-primary">{eyebrow}</p>
     ) : null}
-  <h2 className="text-3xl font-semibold text-move-green">{title}</h2>
-    <div className="mt-4 space-y-4 text-base text-slate-200">{children}</div>
+  <h2 className="text-3xl font-bold text-slate-900">{title}</h2>
+    <div className="mt-4 space-y-4 text-base text-slate-600">{children}</div>
   </section>
 )
 
@@ -44,8 +44,8 @@ const BulletList = ({ items }) => (
       const Icon = iconMap[normalized.icon ?? 'check'] ?? FiCheckCircle
       return (
         <li key={index} className="flex items-start gap-3">
-          <Icon className="mt-1 shrink-0 text-move-green" />
-          <span>{normalized.text}</span>
+          <Icon className="mt-1 shrink-0 text-brand-primary" />
+          <span className="text-slate-700">{normalized.text}</span>
         </li>
       )
     })}
@@ -57,12 +57,12 @@ const FeatureGrid = ({ items }) => (
     {items.map((item) => {
       const Icon = iconMap[item.icon ?? 'check'] ?? FiCheckCircle
       return (
-        <div key={item.title} className="rounded-2xl border border-white/10 bg-black/30 p-6">
-          <div className="flex items-center gap-3 text-move-green">
+        <div key={item.title} className="rounded-2xl border border-slate-100 bg-slate-50 p-6">
+          <div className="flex items-center gap-3 text-brand-primary">
             <Icon className="text-xl" />
-            <h3 className="text-lg font-semibold text-slate-100">{item.title}</h3>
+            <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
           </div>
-          <p className="mt-3 text-sm text-slate-300">{item.description}</p>
+          <p className="mt-3 text-sm text-slate-600">{item.description}</p>
         </div>
       )
     })}
@@ -83,28 +83,30 @@ const Testimonials = ({ items }) => (
 const FAQList = ({ items }) => (
   <div className="space-y-3">
     {items.map((item, index) => (
-      <details key={index} className="group rounded-2xl border border-white/10 bg-black/20 p-4">
-        <summary className="flex cursor-pointer items-center justify-between text-left text-base font-semibold text-slate-100">
+      <details key={index} className="group rounded-2xl border border-slate-200 bg-white p-5 transition-all duration-200 hover:border-brand-primary">
+        <summary className="flex cursor-pointer items-center justify-between text-left text-base font-bold text-slate-900 list-none">
           {item.question}
-          <span className="text-move-green transition group-open:rotate-45">+</span>
+          <span className="text-brand-primary transition-transform duration-300 group-open:rotate-45 font-black text-xl">+</span>
         </summary>
-        <p className="mt-3 text-sm text-slate-300">{item.answer}</p>
+        <div className="mt-4 border-t border-slate-50 pt-4 text-sm font-medium leading-relaxed text-slate-600">
+          {item.answer}
+        </div>
       </details>
     ))}
   </div>
 )
 
 const CtaCard = ({ id, title, text, buttonLabel, buttonHref = '#checkout', note }) => (
-  <section id={id} className="rounded-3xl border border-move-green/40 bg-gradient-to-br from-[#c6f6d5] via-[#b6f2ce] to-[#a9e9c2] p-8 text-center shadow-lg">
-    <h2 className="text-3xl font-semibold text-[#0f5132]">{title}</h2>
-    <p className="mt-3 text-base text-[#1f5c42]">{text}</p>
+  <section id={id} className="rounded-3xl border border-brand-primary/20 bg-gradient-to-br from-zinc-900 via-zinc-950 to-brand-primary/20 p-8 text-center shadow-2xl">
+    <h2 className="text-3xl font-semibold text-white">{title}</h2>
+    <p className="mt-3 text-base text-zinc-400">{text}</p>
     <a
       href={buttonHref}
-      className="mt-6 inline-flex items-center justify-center rounded-full bg-move-green px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-lg shadow-move-green/30 transition hover:bg-[#0a7a4a]"
+      className="mt-6 inline-flex items-center justify-center rounded-full border-2 border-slate-900 bg-slate-900 px-10 py-5 text-base font-black uppercase text-white shadow-md transition-all duration-300 hover:bg-white hover:text-slate-900"
     >
       {buttonLabel}
     </a>
-    {note ? <p className="mt-3 text-xs uppercase tracking-wide text-[#2e6c4c]/80">{note}</p> : null}
+    {note ? <p className="mt-4 text-xs uppercase tracking-widest text-zinc-500">{note}</p> : null}
   </section>
 )
 

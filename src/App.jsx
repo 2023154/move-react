@@ -50,16 +50,19 @@ export default function App() {
   const navLabels = useMemo(() => content.nav, [content])
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-night via-surface to-night text-slate-100">
-      <Header labels={navLabels} />
+    <div className="min-h-screen bg-white text-zinc-950">
+      <Header
+        labels={navLabels}
+        languages={languages}
+        currentLanguage={language}
+        onSelectLanguage={setLanguage}
+        loading={loading}
+      />
 
-      <main className="space-y-12 md:space-y-16">
+      <main className="pt-24 space-y-12 md:space-y-16">
         <HomeScreen
           slides={content.hero.slides}
           ctaLink={content.hero.ctaLink}
-          languages={languages}
-          currentLanguage={language}
-          onSelectLanguage={setLanguage}
           loading={loading}
         />
         <SalesSections sales={content.sales} />

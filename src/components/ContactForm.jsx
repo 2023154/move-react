@@ -28,7 +28,7 @@ export function ContactForm({ labels }) {
 
   return (
     <form onSubmit={handleSubmit} className="grid gap-4">
-      <label className="grid gap-2 text-sm font-semibold text-slate-200">
+      <label className="grid gap-2 text-sm font-semibold text-slate-700">
         {formLabels.name}
         <input
           type="text"
@@ -36,10 +36,10 @@ export function ContactForm({ labels }) {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-move-green"
+          className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-900 outline-none transition focus:border-brand-primary"
         />
       </label>
-      <label className="grid gap-2 text-sm font-semibold text-slate-200">
+      <label className="grid gap-2 text-sm font-semibold text-slate-700">
         {formLabels.email}
         <input
           type="email"
@@ -47,10 +47,10 @@ export function ContactForm({ labels }) {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-move-green"
+          className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-900 outline-none transition focus:border-brand-primary"
         />
       </label>
-      <label className="grid gap-2 text-sm font-semibold text-slate-200">
+      <label className="grid gap-2 text-sm font-semibold text-slate-700">
         {formLabels.message}
         <textarea
           rows="5"
@@ -58,21 +58,21 @@ export function ContactForm({ labels }) {
           value={formData.message}
           onChange={handleChange}
           required
-          className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-base text-white outline-none transition focus:border-move-green"
+          className="w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-base text-slate-900 outline-none transition focus:border-brand-primary"
         />
       </label>
       <button
         type="submit"
         disabled={status === 'loading'}
-        className="mt-2 inline-flex items-center justify-center rounded-full bg-move-green metallic-effect px-6 py-3 text-sm font-semibold uppercase tracking-wide text-move-beige shadow-glow transition hover:bg-move-gold hover:text-move-gray-dark disabled:cursor-not-allowed disabled:opacity-70"
+        className="mt-2 inline-flex items-center justify-center rounded-full border-2 border-slate-900 bg-slate-900 px-8 py-4 text-base font-black uppercase text-white shadow-md transition-all duration-300 hover:bg-white hover:text-slate-900 disabled:cursor-not-allowed disabled:opacity-70"
       >
         {status === 'loading' ? 'Enviando...' : formLabels.button}
       </button>
       {status === 'success' && (
-        <p className="text-sm font-medium text-move-green">Mensagem enviada! Verifique seu e-mail para nossa resposta.</p>
+        <p className="text-sm font-medium text-emerald-600">Sua solicitação foi enviada! Retornaremos em breve.</p>
       )}
       {status === 'error' && (
-        <p className="text-sm font-medium text-red-400">{error || 'Não foi possível enviar sua mensagem. Tente novamente em instantes.'}</p>
+        <p className="text-sm font-medium text-red-500">{error || 'Não foi possível enviar sua mensagem. Tente novamente.'}</p>
       )}
     </form>
   );

@@ -7,10 +7,10 @@ export function ContactScreen({ contact }) {
 
   return (
     <section id="contact" className="mx-auto max-w-4xl px-4">
-      <div className="metallic-effect rounded-3xl border border-move-gray-light/10 bg-metallic-dark p-8 shadow-2xl md:p-10">
-        <h2 className="text-center text-3xl font-semibold text-move-gold">{title}</h2>
+      <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm md:p-10">
+        <h2 className="text-center text-3xl font-bold text-slate-900">{title}</h2>
         {subtitle && (
-          <p className="mt-3 text-center text-sm text-move-gray-light">
+          <p className="mt-3 text-center text-sm text-slate-500">
             {subtitle}
           </p>
         )}
@@ -18,7 +18,7 @@ export function ContactScreen({ contact }) {
           <ContactForm labels={contact?.form} />
         </div>
         {disclaimer && (
-          <p className="mt-6 text-center text-xs text-move-gray-light opacity-80">
+          <p className="mt-6 text-center text-xs text-slate-400 opacity-80">
             {disclaimer}
           </p>
         )}
