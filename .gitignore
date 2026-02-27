@@ -41,3 +41,5 @@ coverage/
 *.tgz
 .out/
 ._*
+.exe
+.node_modules/
