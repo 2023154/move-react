@@ -38,7 +38,7 @@ app.post('/contact', async (req, res) => {
       from: `${name} <${process.env.GMAIL_USER}>`,
       replyTo: email,
       to: process.env.GMAIL_DESTINATION || process.env.GMAIL_USER,
-      subject: `Mensagem do site MOVE - ${name}`,
+      subject: `Mensagem do site Mundo-Online-World - ${name}`,
       text: message,
       html: `<p><strong>Nome:</strong> ${name}</p><p><strong>E-mail:</strong> ${email}</p><p>${message}</p>`
     })
