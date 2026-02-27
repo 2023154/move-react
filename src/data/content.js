@@ -1,5 +1,6 @@
-import heroPrimaryImg from '../images/capaprincipal2png.png'
-import courseCoverImg from '../images/capadocurso.jpg'
+import card1 from '../images/card1.png'
+import card2 from '../images/card2.png'
+import card3 from '../images/card3.png'
 
 export const languages = [
   { code: 'pt', label: 'Português', flag: 'BR' },
@@ -33,7 +34,7 @@ export const baseContent = {
           'Painel de Controle Intuitivo'
         ],
         cta: 'Solicitar Orçamento',
-        image: courseCoverImg,
+        image: card1,
         imageAlt: 'Desenvolvimento de Websites Profissionais'
       },
       {
@@ -51,7 +52,7 @@ export const baseContent = {
           'Segurança de Dados'
         ],
         cta: 'Ver Soluções',
-        image: heroPrimaryImg,
+        image: card2,
         imageAlt: 'Sistemas Personalizados para Empresas'
       },
       {
@@ -69,7 +70,7 @@ export const baseContent = {
           'Relatórios de Performance'
         ],
         cta: 'Escalar meu Negócio',
-        image: courseCoverImg,
+        image: card3,
         imageAlt: 'Gestão de Tráfego e Social Media'
       }
     ],

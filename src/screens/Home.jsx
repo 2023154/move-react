@@ -1,5 +1,5 @@
 import { HeroSlider } from '../components/HeroSlider'
-import coverImage from '../images/capaprincipal2png.png'
+import coverImage from '../images/imagemPrincipal.png'
 
 export function HomeScreen({ slides, ctaLink, loading }) {
   const sliderSlides = slides.map((slide) => ({ ...slide, ctaLink: slide.ctaLink ?? ctaLink ?? '#courses' }))
@@ -13,7 +13,7 @@ export function HomeScreen({ slides, ctaLink, loading }) {
         <img
           src={coverImage}
           alt="Main Cover"
-          className="absolute inset-0 h-full w-full object-cover opacity-10"
+          className="absolute inset-0 h-full w-full object-cover opacity-50"
         />
         <div className="absolute inset-0 bg-white/40"></div>
         <div className="absolute inset-0 flex items-center justify-center p-4">
