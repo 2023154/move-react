@@ -22,7 +22,8 @@ export const baseContent = {
     slides: [
       {
         id: 'FraseTitulo',
-        title: 'Sua Empresa na Vitrine Digital',
+        title1: 'Sua Empresa na',
+        title2: 'Vitrine Digital',
         tagline: 'Presença Digital de Alta Performance',
         description: 'Conquiste credibilidade e atraia novos clientes com um site profissional, veloz e otimizado. Nós cuidamos de toda a tecnologia para você focar no seu crescimento.',
         price: {

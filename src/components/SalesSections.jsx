@@ -97,16 +97,16 @@ const FAQList = ({ items }) => (
 )
 
 const CtaCard = ({ id, title, text, buttonLabel, buttonHref = '#checkout', note }) => (
-  <section id={id} className="rounded-3xl border border-blue-400/30 bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-400 p-8 text-center shadow-2xl text-white">
+  <section id={id} className="rounded-3xl border border-white/10 bg-premium-gradient p-8 text-center shadow-2xl text-white">
     <h2 className="text-3xl font-bold">{title}</h2>
-    <p className="mt-3 text-lg opacity-90">{text}</p>
+    <p className="mt-3 text-lg text-white/90">{text}</p>
     <a
       href={buttonHref}
-      className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-10 py-5 text-base font-black uppercase text-blue-600 shadow-md transition-all duration-300 hover:scale-105 hover:bg-zinc-50"
+      className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-10 py-5 text-base font-black uppercase text-brand-primary shadow-xl transition-all duration-300 hover:scale-105 hover:bg-slate-50"
     >
       {buttonLabel}
     </a>
-    {note ? <p className="mt-4 text-xs font-bold uppercase tracking-widest text-blue-100 opacity-80">{note}</p> : null}
+    {note ? <p className="mt-4 text-xs font-bold uppercase tracking-widest text-white/70">{note}</p> : null}
   </section>
 )
 
@@ -136,17 +136,20 @@ export function SalesSections({ sales }) {
   return (
     <div id="details" className="mx-auto max-w-5xl space-y-12 px-4 md:space-y-16">
       {templates ? (
-        <section className="rounded-3xl border border-pink-500/20 bg-gradient-to-br from-indigo-600 via-pink-600 to-orange-500 p-8 text-center shadow-2xl text-white">
-          <h2 className="text-3xl font-bold">{templates.title}</h2>
-          <p className="mt-3 text-lg opacity-90">{templates.text}</p>
-          <a
-            href={templates.buttonHref}
-            target="_blank"
-            rel="noreferrer"
-            className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-10 py-4 text-base font-black uppercase text-pink-600 shadow-md transition-all duration-300 hover:scale-105 hover:bg-zinc-50"
-          >
-            {templates.buttonLabel}
-          </a>
+        <section className="rounded-3xl border border-slate-200/20 bg-brand-dark p-8 text-center shadow-xl text-white relative overflow-hidden">
+          <div className="absolute top-0 right-0 -mt-16 -mr-16 h-32 w-32 rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] opacity-20 blur-2xl"></div>
+          <div className="relative z-10">
+            <h2 className="text-3xl font-bold text-white">{templates.title}</h2>
+            <p className="mt-3 text-lg text-slate-300">{templates.text}</p>
+            <a
+              href={templates.buttonHref}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-6 inline-flex items-center justify-center rounded-full bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] px-10 py-4 text-base font-black uppercase text-white shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              {templates.buttonLabel}
+            </a>
+          </div>
         </section>
       ) : null}
 

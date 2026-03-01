@@ -18,15 +18,17 @@ export function HomeScreen({ slides, ctaLink, loading }) {
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/60 via-brand-dark/40 to-white"></div>
         <div className="absolute inset-0 flex items-center justify-center p-4 md:p-8">
           <div className="w-full max-w-5xl text-center">
-            <div className="mx-auto inline-block rounded-[3.5rem] border border-white/30 bg-white/10 p-8 shadow-2xl backdrop-blur-xl md:p-20">
-              <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-brand-primary/20 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-brand-primary ring-1 ring-inset ring-brand-primary/20">
-                 LÍDER EM TRANSFORMAÇÃO DIGITAL
+            <div className="animate-in fade-in zoom-in duration-1000 mx-auto inline-block rounded-[3.5rem] border border-white/30 bg-white/10 p-8 shadow-2xl backdrop-blur-xl md:p-20">
+              <span className="mb-6 inline-flex items-center gap-2 rounded-full bg-white/20 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-white ring-1 ring-inset ring-white/20">
+                 ✨ LÍDER EM TRANSFORMAÇÃO DIGITAL
               </span>
               <h1 className="text-5xl font-black leading-[1.1] tracking-tight text-white md:text-7xl lg:text-8xl">
-                Sua Empresa na <br />
-                <span className="bg-gradient-to-r from-brand-primary via-brand-secondary to-brand-primary bg-clip-text text-transparent italic">Vitrine Digital</span>
+                {primarySlide.title1} <br />
+                <span className="italic">
+                  {primarySlide.title2}
+                </span>
               </h1>
-              <p className="mx-auto mt-8 max-w-2xl text-lg font-medium text-white/90 md:text-2xl">
+              <p className="mx-auto mt-8 max-w-2xl text-lg font-medium text-white md:text-2xl">
                 {primaryDescription}
               </p>
             </div>
