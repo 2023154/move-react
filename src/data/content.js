@@ -90,6 +90,12 @@ export const baseContent = {
     ctaLink: '#contact'
   },
   sales: {
+    templates: {
+      title: 'Conheça nossos Templates',
+      text: 'Confira em nosso Instagram os modelos exclusivos que podemos adaptar para o seu negócio.',
+      buttonLabel: 'Ver Templates no Instagram',
+      buttonHref: 'https://www.instagram.com/mundo_online_world/'
+    },
     problem: {
       title: 'Dificuldades com o seu site atual?',
       bullets: [

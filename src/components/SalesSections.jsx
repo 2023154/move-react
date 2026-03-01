@@ -113,6 +113,7 @@ const CtaCard = ({ id, title, text, buttonLabel, buttonHref = '#checkout', note 
 export function SalesSections({ sales }) {
   if (!sales) return null
   const {
+    templates,
     problem,
     solution,
     product,
@@ -134,6 +135,21 @@ export function SalesSections({ sales }) {
 
   return (
     <div id="details" className="mx-auto max-w-5xl space-y-12 px-4 md:space-y-16">
+      {templates ? (
+        <section className="rounded-3xl border border-pink-500/20 bg-gradient-to-br from-indigo-600 via-pink-600 to-orange-500 p-8 text-center shadow-2xl text-white">
+          <h2 className="text-3xl font-bold">{templates.title}</h2>
+          <p className="mt-3 text-lg opacity-90">{templates.text}</p>
+          <a
+            href={templates.buttonHref}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-10 py-4 text-base font-black uppercase text-pink-600 shadow-md transition-all duration-300 hover:scale-105 hover:bg-zinc-50"
+          >
+            {templates.buttonLabel}
+          </a>
+        </section>
+      ) : null}
+
       {problem ? (
         <Section id="problem" title={problem.title}>
           <BulletList items={problem.bullets} />

@@ -18,7 +18,7 @@ export function Header({ labels, languages, currentLanguage, onSelectLanguage, l
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-6 text-sm sm:text-base">
         <div className="flex flex-col">
           <div className="flex items-center gap-2">
-            <span className="text-4xl font-black tracking-tighter text-slate-900 line-height-tight">Mundo<span className="text-brand-primary">Online</span>World</span>
+            <span className="text-4xl font-black tracking-tighter text-brand-dark line-height-tight">Mundo<span className="text-brand-primary">Online</span>World</span>
           </div>
           <span className="text-sm font-black uppercase tracking-[0.3em] text-brand-primary">{labels?.tagline}</span>
         </div>
