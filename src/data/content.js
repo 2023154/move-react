@@ -235,10 +235,7 @@ export const baseContent = {
     }
   },
   footer: {
-    title: 'Conecte-se Conosco',
-    links: [
-      { label: 'Instagram', url: 'https://www.instagram.com/mundo_online_world/', icon: 'FaInstagram' },
-      { label: 'WhatsApp', url: 'https://wa.me/353834694919', icon: 'FaWhatsapp' }
-    ]
+    title: '',
+    links: []
   }
 }

@@ -7,6 +7,7 @@ import { Footer } from './components/Footer'
 import { ContactScreen } from './screens/Contact'
 import { baseContent, languages } from './data/content'
 import { useAutoTranslate } from './hooks/useAutoTranslate'
+import { FloatingActions } from './components/FloatingActions'
 
 const getInitialLang = () => {
   if (typeof navigator === 'undefined') return 'pt';
@@ -71,6 +72,7 @@ export default function App() {
 
       <Footer footer={content.footer} />
       <BottomNav />
+      <FloatingActions />
     </div>
   )
 }
