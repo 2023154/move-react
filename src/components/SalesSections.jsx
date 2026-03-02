@@ -28,24 +28,24 @@ const iconMap = {
 }
 
 const Section = ({ id, title, eyebrow, children }) => (
-  <section id={id} className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+  <section id={id} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:rounded-3xl md:p-10">
     {eyebrow ? (
-  <p className="text-xs font-semibold uppercase tracking-[0.3em] text-brand-primary">{eyebrow}</p>
+  <p className="text-[10px] font-semibold uppercase tracking-[0.3em] text-brand-primary md:text-xs">{eyebrow}</p>
     ) : null}
-  <h2 className="text-3xl font-bold text-slate-900">{title}</h2>
-    <div className="mt-4 space-y-4 text-base text-slate-600">{children}</div>
+  <h2 className="text-2xl font-bold text-slate-900 md:text-4xl">{title}</h2>
+    <div className="mt-6 space-y-4 text-sm text-slate-600 md:text-lg">{children}</div>
   </section>
 )
 
 const BulletList = ({ items }) => (
-  <ul className="space-y-3">
+  <ul className="grid gap-4 sm:grid-cols-2 lg:gap-6">
     {items.map((item, index) => {
       const normalized = typeof item === 'string' ? { text: item } : item
       const Icon = iconMap[normalized.icon ?? 'check'] ?? FiCheckCircle
       return (
-        <li key={index} className="flex items-start gap-3">
+        <li key={index} className="flex items-start gap-3 rounded-xl border border-slate-50 bg-slate-50/50 p-4 transition-colors hover:bg-slate-50">
           <Icon className="mt-1 shrink-0 text-brand-primary" />
-          <span className="text-slate-700">{normalized.text}</span>
+          <span className="text-slate-700 leading-tight md:leading-normal">{normalized.text}</span>
         </li>
       )
     })}
@@ -53,16 +53,16 @@ const BulletList = ({ items }) => (
 )
 
 const FeatureGrid = ({ items }) => (
-  <div className="grid gap-6 md:grid-cols-2">
+  <div className="grid gap-4 sm:grid-cols-2 lg:gap-6">
     {items.map((item) => {
       const Icon = iconMap[item.icon ?? 'check'] ?? FiCheckCircle
       return (
-        <div key={item.title} className="rounded-2xl border border-slate-100 bg-slate-50 p-6">
+        <div key={item.title} className="flex flex-col rounded-2xl border border-slate-100 bg-slate-50 p-5 md:p-6">
           <div className="flex items-center gap-3 text-brand-primary">
-            <Icon className="text-xl" />
-            <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
+            <Icon className="text-lg md:text-xl" />
+            <h3 className="text-base font-bold text-slate-900 md:text-lg">{item.title}</h3>
           </div>
-          <p className="mt-3 text-sm text-slate-600">{item.description}</p>
+          <p className="mt-3 text-xs text-slate-600 md:text-sm">{item.description}</p>
         </div>
       )
     })}
@@ -97,16 +97,16 @@ const FAQList = ({ items }) => (
 )
 
 const CtaCard = ({ id, title, text, buttonLabel, buttonHref = '#checkout', note }) => (
-  <section id={id} className="rounded-3xl border border-white/10 bg-premium-gradient p-8 text-center shadow-2xl text-white">
-    <h2 className="text-3xl font-bold">{title}</h2>
-    <p className="mt-3 text-lg text-white/90">{text}</p>
+  <section id={id} className="rounded-[2.5rem] border border-white/10 bg-premium-gradient p-8 text-center shadow-2xl text-white md:p-16">
+    <h2 className="text-2xl font-bold sm:text-3xl md:text-5xl">{title}</h2>
+    <p className="mt-4 text-base opacity-90 sm:text-lg md:text-xl">{text}</p>
     <a
       href={buttonHref}
-      className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-10 py-5 text-base font-black uppercase text-brand-primary shadow-xl transition-all duration-300 hover:scale-105 hover:bg-slate-50"
+      className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-black uppercase text-brand-primary shadow-xl transition-all duration-300 hover:scale-105 hover:bg-slate-50 md:px-12 md:py-6 md:text-base"
     >
       {buttonLabel}
     </a>
-    {note ? <p className="mt-4 text-xs font-bold uppercase tracking-widest text-white/70">{note}</p> : null}
+    {note ? <p className="mt-6 text-[10px] font-bold uppercase tracking-widest text-white/70 md:text-xs">{note}</p> : null}
   </section>
 )
 
@@ -134,16 +134,16 @@ export function SalesSections({ sales }) {
   } = sales
 
   return (
-    <div id="details" className="mx-auto max-w-5xl space-y-12 px-4 md:space-y-16">
+    <div id="details" className="mx-auto max-w-5xl space-y-12 px-4 md:space-y-24">
       {templates ? (
-        <section className="rounded-3xl border border-pink-500/20 bg-gradient-to-br from-indigo-600 via-pink-600 to-orange-500 p-8 text-center shadow-2xl text-white">
-          <h2 className="text-3xl font-bold">{templates.title}</h2>
-          <p className="mt-3 text-lg opacity-90">{templates.text}</p>
+        <section className="rounded-[2.5rem] border border-pink-500/20 bg-gradient-to-br from-indigo-600 via-pink-600 to-orange-500 p-8 text-center shadow-2xl text-white md:p-16">
+          <h2 className="text-2xl font-bold sm:text-3xl md:text-5xl">{templates.title}</h2>
+          <p className="mt-4 text-base opacity-90 sm:text-lg md:text-xl">{templates.text}</p>
           <a
             href={templates.buttonHref}
             target="_blank"
             rel="noreferrer"
-            className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-10 py-4 text-base font-black uppercase text-pink-600 shadow-md transition-all duration-300 hover:scale-105 hover:bg-zinc-50"
+            className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-black uppercase text-pink-600 shadow-md transition-all duration-300 hover:scale-105 hover:bg-zinc-50 md:px-12 md:py-6 md:text-base"
           >
             {templates.buttonLabel}
           </a>

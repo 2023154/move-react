@@ -11,10 +11,10 @@ export function HeroSlider({ slides }) {
           return (
             <section
               key={slide.id ?? slide.title}
-              className="relative min-w-[90%] snap-center rounded-[2.5rem] border border-slate-200 bg-white p-6 text-zinc-950 shadow-xl transition-transform duration-300 ease-out hover:-translate-y-1 md:min-w-[70%]"
+              className="relative min-w-[85%] snap-center rounded-[2.5rem] border border-slate-200 bg-white p-5 text-zinc-950 shadow-xl transition-transform duration-300 ease-out hover:-translate-y-1 sm:min-w-[70%] md:min-w-[80%] md:p-8 lg:min-w-[100%]"
             >
-              <div className="grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
-                <div className="relative overflow-hidden rounded-3xl border border-slate-100 bg-slate-100">
+              <div className="grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-10">
+                <div className="relative h-48 overflow-hidden rounded-3xl border border-slate-100 bg-slate-100 sm:h-64 md:h-full">
                   {slide.image && (
                     <img
                       src={slide.image}
@@ -24,24 +24,24 @@ export function HeroSlider({ slides }) {
                     />
                   )}
                   {displayPrice && (
-                    <div className="absolute bottom-4 right-4 rounded-full bg-brand-primary px-4 py-2 text-white shadow-lg">
-                      <span className="text-sm font-bold">{displayPrice}</span>
+                    <div className="absolute bottom-4 right-4 rounded-full bg-brand-primary px-3 py-1.5 text-white shadow-lg md:px-4 md:py-2">
+                      <span className="text-xs font-bold md:text-sm">{displayPrice}</span>
                     </div>
                   )}
                 </div>
 
-                <div className="flex flex-col gap-4">
-                  {slide.tagline && <span className="text-xs font-bold uppercase tracking-[0.35em] text-brand-primary">{slide.tagline}</span>}
+                <div className="flex flex-col gap-3 md:gap-4">
+                  {slide.tagline && <span className="text-[10px] font-bold uppercase tracking-[0.35em] text-brand-primary md:text-xs">{slide.tagline}</span>}
                   <div>
-                    <h1 className="text-3xl font-extrabold text-zinc-950 md:text-4xl">{slide.title}</h1>
-                    {slide.description && <p className="mt-3 text-balance text-sm text-zinc-700 md:text-base">{slide.description}</p>}
+                    <h1 className="text-2xl font-extrabold text-zinc-950 sm:text-3xl md:text-4xl">{slide.title}</h1>
+                    {slide.description && <p className="mt-2 text-balance text-sm text-zinc-700 md:mt-3 md:text-base">{slide.description}</p>}
                   </div>
 
                   {Array.isArray(slide.features) && slide.features.length > 0 && (
-                    <ul className="grid gap-2 text-sm text-zinc-700 md:grid-cols-2">
+                    <ul className="grid gap-2 text-xs text-zinc-700 sm:text-sm md:grid-cols-2">
                       {slide.features.map((feature, index) => (
-                        <li key={index} className="flex items-start gap-2 rounded-xl border border-slate-100 bg-slate-50 p-3">
-                          <span className="mt-1 h-1.5 w-1.5 rounded-full bg-brand-primary" aria-hidden />
+                        <li key={index} className="flex items-start gap-2 rounded-xl border border-slate-100 bg-slate-50 p-2 md:p-3">
+                          <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-primary" aria-hidden />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -49,35 +49,35 @@ export function HeroSlider({ slides }) {
                   )}
 
                   {slide.price?.note && (
-                    <p className="text-xs font-bold uppercase tracking-wide text-brand-primary">
+                    <p className="text-[10px] font-bold uppercase tracking-wide text-brand-primary md:text-xs">
                       {slide.price.note}
                     </p>
                   )}
 
-                  <div className="mt-auto flex flex-wrap items-center gap-4 pt-2">
+                  <div className="mt-auto flex flex-col gap-4 pt-4 sm:flex-row sm:items-center">
                     {displayPrice && (
                       <div className="flex flex-col">
                         {displayOldPrice && (
-                          <span className="text-xl font-extrabold text-red-600 line-through decoration-red-600/40">
+                          <span className="text-lg font-extrabold text-red-600 line-through decoration-red-600/40 md:text-xl">
                             {displayOldPrice}
                           </span>
                         )}
                         <div className="flex items-baseline gap-2">
                           <span
-                            className="text-4xl font-black md:text-5xl text-brand-primary"
+                            className="text-3xl font-black text-brand-primary sm:text-4xl md:text-5xl"
                             style={{
                               letterSpacing: '-0.02em',
                             }}
                           >
                             {displayPrice}
                           </span>
-                          <span className="text-xs font-bold uppercase tracking-[0.4em] text-slate-400">AGENCY</span>
+                          <span className="text-[10px] font-bold uppercase tracking-[0.4em] text-slate-400">AGENCY</span>
                         </div>
                       </div>
                     )}
                     <a
                       href={slide.ctaLink ?? '#courses'}
-                      className="inline-flex items-center gap-2 rounded-full border-2 border-slate-900 bg-slate-900 px-8 py-4 text-base font-black uppercase text-white shadow-md transition-all duration-300 hover:bg-white hover:text-slate-900"
+                      className="inline-flex items-center justify-center gap-2 rounded-full border-2 border-slate-900 bg-slate-900 px-6 py-3 text-sm font-black uppercase text-white shadow-md transition-all duration-300 hover:bg-white hover:text-slate-900 sm:px-8 sm:py-4 sm:text-base"
                     >
                       {slide.cta}
                     </a>

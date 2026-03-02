@@ -15,12 +15,14 @@ export function Header({ labels, languages, currentLanguage, onSelectLanguage, l
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-100 bg-white/90 backdrop-blur-md">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-6 text-sm sm:text-base">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 text-sm sm:px-6 sm:py-6 sm:text-base">
         <div className="flex flex-col">
           <div className="flex items-center gap-2">
-            <span className="text-4xl font-black tracking-tighter text-brand-dark line-height-tight">Mundo<span className="text-brand-primary">Online</span>World</span>
+            <span className="text-2xl font-black tracking-tighter text-brand-dark sm:text-3xl lg:text-4xl">
+              Mundo<span className="text-brand-primary">Online</span>World
+            </span>
           </div>
-          <span className="text-sm font-black uppercase tracking-[0.3em] text-brand-primary">{labels?.tagline}</span>
+          <span className="text-[10px] font-black uppercase tracking-[0.2em] text-brand-primary sm:text-xs sm:tracking-[0.3em]">{labels?.tagline}</span>
         </div>
         
         <div className="flex items-center gap-4 md:gap-8">

@@ -60,14 +60,16 @@ export default function App() {
          onSelectLanguage={setLanguage}
       />
 
-      <main className="pt-24 space-y-12 md:space-y-16">
+      <main className="pt-20 space-y-8 md:pt-28 md:space-y-16">
         <HomeScreen
           slides={content.hero.slides}
           ctaLink={content.hero.ctaLink}
           loading={loading}
         />
-        <SalesSections sales={content.sales} />
-        <ContactScreen contact={content.contact} />
+        <div className="space-y-12 md:space-y-24">
+          <SalesSections sales={content.sales} />
+          <ContactScreen contact={content.contact} />
+        </div>
       </main>
 
       <Footer footer={content.footer} />
