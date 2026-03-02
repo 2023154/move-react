@@ -66,13 +66,13 @@ export function ContactForm({ labels }) {
         disabled={status === 'loading'}
         className="mt-2 inline-flex items-center justify-center rounded-full border-2 border-slate-900 bg-slate-900 px-8 py-4 text-base font-black uppercase text-white shadow-md transition-all duration-300 hover:bg-white hover:text-slate-900 disabled:cursor-not-allowed disabled:opacity-70"
       >
-        {status === 'loading' ? 'Enviando...' : formLabels.button}
+        {status === 'loading' ? (formLabels.loading || 'Sending...') : formLabels.button}
       </button>
       {status === 'success' && (
-        <p className="text-sm font-medium text-emerald-600">Sua solicitação foi enviada! Retornaremos em breve.</p>
+        <p className="text-sm font-medium text-emerald-600">{formLabels.success || 'Your request has been sent! We will get back to you soon.'}</p>
       )}
       {status === 'error' && (
-        <p className="text-sm font-medium text-red-500">{error || 'Não foi possível enviar sua mensagem. Tente novamente.'}</p>
+        <p className="text-sm font-medium text-red-500">{error || formLabels.error || 'Unable to send your message. Please try again.'}</p>
       )}
     </form>
   );

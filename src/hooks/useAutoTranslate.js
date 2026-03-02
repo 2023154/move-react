@@ -73,7 +73,7 @@ export const useAutoTranslate = (baseContent, targetLang) => {
 
   useEffect(() => {
     let cancelled = false
-    if (targetLang === 'pt') {
+    if (targetLang === 'en') {
       setTranslated(baseContent)
       setLoading(false)
       return

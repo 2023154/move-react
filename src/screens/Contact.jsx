@@ -1,8 +1,8 @@
 import { ContactForm } from '../components/ContactForm'
 
 export function ContactScreen({ contact }) {
-  const title = contact?.title ?? 'Vamos conversar'
-  const subtitle = contact?.subtitle ?? 'Envie sua mensagem e retornaremos com orientações personalizadas em até 24 horas.'
+  const title = contact?.title ?? 'Let\'s talk'
+  const subtitle = contact?.subtitle ?? 'Send your message and we will get back to you with personalized guidance within 24 hours.'
   const disclaimer = contact?.disclaimer
 
   return (

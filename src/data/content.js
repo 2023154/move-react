@@ -13,189 +13,190 @@ export const languages = [
 
 export const baseContent = {
   nav: {
-    home: 'Início',
-    details: 'Planos',
+    home: 'Home',
+    details: 'Plans',
     faq: 'FAQ',
-    tagline: 'Expanda seu Negócio'
+    tagline: 'Expand Your Business'
   },
   hero: {
     slides: [
       {
         id: 'FraseTitulo',
-        title1: 'Sua Empresa na',
-        title2: 'Vitrine Digital',
-        tagline: 'Presença Digital de Alta Performance',
-        description: 'Conquiste credibilidade e atraia novos clientes com um site profissional, veloz e otimizado. Nós cuidamos de toda a tecnologia para você focar no seu crescimento.',
+        badge: '✨ LEADER IN DIGITAL TRANSFORMATION',
+        title1: 'Your Company in the',
+        title2: 'Digital Storefront',
+        tagline: 'High-Performance Digital Presence',
+        description: 'Gain credibility and attract new customers with a professional, fast, and optimized website. We handle all the technology so you can focus on growing.',
         price: {
-          main: '$99/anual',
+          main: '$99/year',
           oldPrice: '$330',
-          brl: { main: 'R$ 599/anual', oldPrice: 'R$ 1.999' },
-          note: 'Hospedagem estática (GitHub/Render) inclusa'
+          brl: { main: 'R$ 599/year', oldPrice: 'R$ 1,999' },
+          note: 'Static hosting (GitHub/Render) included'
         },
         features: [
-          'Site Estático de 1 Página',
-          'Conexão de Domínio Personalizado',
-          '1 Atualização Menor por mês',
-          'Até 3 Fotos de Marketing Inclusas',
-          'Suporte Direto (Email & WhatsApp)'
+          '1-Page Static Website',
+          'Custom Domain Connection',
+          '1 Minor Update per month',
+          'Up to 3 Marketing Photos Included',
+          'Direct Support (Email & WhatsApp)'
         ],
-        cta: 'Assinar Plano Básico',
+        cta: 'Subscribe to Basic Plan',
         image: card1,
-        imageAlt: 'Plano de Website Básico'
+        imageAlt: 'Basic Website Plan'
       },
       {
         id: 'professional-plan',
-        title: 'Plano Profissional',
-        tagline: 'Crescimento e Autoridade',
-        description: 'Site dinâmico de até 5 páginas com banco de dados. Perfeito para empresas que precisam de mais espaço e SEO.',
+        title: 'Professional Plan',
+        tagline: 'Growth and Authority',
+        description: 'Dynamic website of up to 5 pages with a database. Perfect for businesses that need more space and SEO optimization.',
         price: {
-          main: '$199/anual',
+          main: '$199/year',
           oldPrice: '$660',
-          brl: { main: 'R$ 1.199/anual', oldPrice: 'R$ 3.999' },
-          note: 'Banco de Dados + 5GB de Armazenamento'
+          brl: { main: 'R$ 1,199/year', oldPrice: 'R$ 3,999' },
+          note: 'Database + 5GB Storage included'
         },
         features: [
-          'Site Dinâmico de até 5 Páginas',
-          'Banco de Dados (Supabase)',
-          'Remoção da Marca d\'água "Built By"',
-          '3 Atualizações Menores por mês',
-          // 'Google Analytics e Configuração SEO'
+          'Up to 5-Page Dynamic Website',
+          'Database Integration (Supabase)',
+          'Removal of "Built By" watermark',
+          '3 Minor Updates per month',
+          // 'Google Analytics and SEO Setup'
         ],
-        cta: 'Assinar Plano Profissional',
+        cta: 'Subscribe to Professional Plan',
         image: card2,
-        imageAlt: 'Plano de Website Profissional'
+        imageAlt: 'Professional Website Plan'
       },
       {
         id: 'premium-plan',
-        title: 'Plano Premium',
-        tagline: 'Solução Completa e Autonomia',
-        description: 'Plataforma completa e dinâmica. Faça login no CMS para editar seu próprio conteúdo e aceite pagamentos online.',
+        title: 'Premium Plan',
+        tagline: 'Complete Solution and Autonomy',
+        description: 'A complete, dynamic platform. Log into the CMS to edit your own content and accept online payments.',
         price: {
-          main: '$499/anual',
+          main: '$499/year',
           oldPrice: '$1000',
-          brl: { main: 'R$ 2.999/anual', oldPrice: 'R$ 5.999' },
-          note: 'Tráfego de 50GB + 20GB de Armazenamento'
+          brl: { main: 'R$ 2,999/year', oldPrice: 'R$ 5,999' },
+          note: '50GB Bandwidth + 20GB Storage included'
         },
         features: [
-          'Painel de Login CMS para o Cliente',
-          'Integração de Pagamentos (Stripe)',
-          'Fotos e Atualizações Ilimitadas',
-          'Domínio Personalizado + Analytics',
-          'Suporte VIP (WhatsApp e Chamadas)'
+          'Client CMS Login Panel',
+          'Payment Integration (Stripe)',
+          'Unlimited Photos and Updates',
+          'Custom Domain + Analytics',
+          'VIP Support (WhatsApp and Calls)'
         ],
-        cta: 'Assinar Plano Premium',
+        cta: 'Subscribe to Premium Plan',
         image: card3,
-        imageAlt: 'Plano de Website Premium'
+        imageAlt: 'Premium Website Plan'
       }
     ],
     ctaLink: '#contact'
   },
   sales: {
     templates: {
-      title: 'Conheça nossos Templates',
-      text: 'Confira em nosso Instagram os modelos exclusivos que podemos adaptar para o seu negócio.',
-      buttonLabel: 'Ver nossos Templates no Instagram',
+      title: 'Discover Our Templates',
+      text: 'Check out our Instagram for exclusive templates we can adapt for your business.',
+      buttonLabel: 'View our Templates on Instagram',
       buttonHref: 'https://www.instagram.com/mundo_online_world/'
     },
     problem: {
-      title: 'Dificuldades com o seu site atual?',
+      title: 'Struggling with your current website?',
       bullets: [
-        'Não tem tempo ou conhecimento para atualizar o site',
-        'Pagando taxas mensais altas para agências tradicionais',
-        'Site lento ou que não se adapta a telas de celular',
-        'Dificuldade para integrar formulários e banco de dados',
-        'Falta de suporte rápido quando você precisa de mudanças'
+        'No time or technical knowledge to update the site',
+        'Paying high monthly fees to traditional agencies',
+        'Slow website or not mobile-friendly',
+        'Difficulty integrating forms and databases',
+        'Lack of fast support when you need to make changes'
       ]
     },
     solution: {
-      title: 'Nós Construímos e Gerenciamos Para Você',
+      title: 'We Build and Manage It For You',
       paragraphs: [
-        'Esqueça os construtores de sites complicados. Nossa estrutura "Feito Para Você" garante que seu negócio tenha uma presença digital profissional sem a dor de cabeça da manutenção técnica.',
-        'Desde uma página estática ultrarrápida até plataformas dinâmicas com CMS próprio e pagamentos via Stripe, nossos planos anuais cobrem tudo: design, hospedagem e atualizações contínuas.'
+        'Forget complicated website builders. Our "Done-For-You" structure ensures your business has a professional digital presence without the headache of technical maintenance.',
+        'From an ultra-fast static page to dynamic platforms with their own CMS and Stripe payments, our annual plans cover everything: design, hosting, and continuous updates.'
       ]
     },
     product: {
-      title: 'Recursos Inclusos nos Nossos Planos',
+      title: 'Features Included in Our Plans',
       items: [
         {
           icon: 'device',
-          title: 'Domínio Personalizado',
-          description: 'Traga o seu próprio domínio. Nós fazemos toda a conexão técnica gratuitamente em todos os planos.'
+          title: 'Custom Domain',
+          description: 'Bring your own domain. We handle all the technical setup for free on every plan.'
         },
         {
           icon: 'clipboard',
-          title: 'Banco de Dados Integrado',
-          description: 'A partir do plano Profissional, seu site conta com a robustez do Supabase para gestão de dados e formulários.'
+          title: 'Integrated Database',
+          description: 'Starting from the Professional plan, your website is backed by the power of Supabase for data and form management.'
         },
         {
           icon: 'chart',
-          title: 'Atualizações Contínuas',
-          description: 'Precisa trocar uma foto ou um texto? Oferecemos atualizações menores mensais, ou edições ilimitadas no plano Premium.'
+          title: 'Continuous Updates',
+          description: 'Need to change a photo or text? We offer minor monthly updates, or unlimited edits on the Premium plan.'
         },
         // {
         //   icon: 'file',
-        //   title: 'Google Analytics e SEO',
-        //   description: 'Otimização para os motores de busca e rastreamento de visitantes inclusos nos planos Profissional e Premium.'
+        //   title: 'Google Analytics and SEO',
+        //   description: 'Search engine optimization and visitor tracking included in the Professional and Premium plans.'
         // },
         {
           icon: 'shield',
-          title: 'Aceite Pagamentos Online',
-          description: 'No plano Premium, integramos o Stripe para que você possa vender produtos ou serviços diretamente no seu site.'
+          title: 'Accept Online Payments',
+          description: 'On the Premium plan, we integrate Stripe so you can sell products or services directly on your website.'
         },
         {
           icon: 'chart',
-          title: 'Suporte Dedicado',
-          description: 'Fale diretamente com nossa equipe via Email ou WhatsApp. Clientes Premium têm acesso a suporte VIP e chamadas.'
+          title: 'Dedicated Support',
+          description: 'Speak directly with our team via Email or WhatsApp. Premium clients have access to VIP support and phone calls.'
         }
       ],
-      note: 'Todos os sites são responsivos, garantindo uma experiência perfeita em computadores, tablets e celulares.'
+      note: 'All websites are fully responsive, ensuring a perfect experience on desktops, tablets, and mobile phones.'
     },
     benefits: {
-      title: 'Por que escolher nossa assinatura?',
+      title: 'Why choose our subscription?',
       bullets: [
-        'Custos transparentes com faturamento anual único',
-        'Hospedagem e manutenção totalmente inclusas',
-        'Sites codificados à mão para máxima velocidade',
-        'Sem necessidade de conhecimentos técnicos da sua parte',
-        'Design moderno que reflete a qualidade da sua empresa'
+        'Transparent costs with a single annual billing cycle',
+        'Hosting and maintenance are fully included',
+        'Hand-coded websites optimized for maximum speed',
+        'Zero technical knowledge required on your part',
+        'Modern design that reflects the quality of your company'
       ]
     },
     differentiators: {
-      title: 'Diferenciais que geram resultados',
+      title: 'Differentiators that drive results',
       bullets: [
-        'Transição fácil de um site Estático (Basic) para Dinâmico (Pro/Premium)',
-        'Remoção de marca d\'água a partir do plano Profissional',
-        'Limites de armazenamento generosos (Até 20GB no Premium)',
-        'Integração direta com suas redes sociais e WhatsApp',
-        'Opção de Painel CMS para você ter controle total (Premium)'
+        'Easy transition from a Static (Basic) to a Dynamic (Pro/Premium) website',
+        'Watermark removal starting from the Professional plan',
+        'Generous storage limits (Up to 20GB on the Premium plan)',
+        'Direct integration with your social media networks and WhatsApp',
+        'Optional CMS Panel for total control (Premium)'
       ]
     },
     primaryCta: {
       id: 'cta-primary',
-      title: 'Pronto para colocar seu site no ar?',
-      text: 'Clique no botão abaixo para agendar sua consultoria gratuita e escolher o plano ideal para o seu negócio.',
-      buttonLabel: 'Quero meu site profissional',
+      title: 'Ready to launch your website?',
+      text: 'Click the button below to schedule your free consultation and choose the ideal plan for your business.',
+      buttonLabel: 'I want my professional website',
       buttonHref: '#contact',
-      note: 'Configuração e design guiados pela nossa equipe.'
+      note: 'Setup and design guided by our expert team.'
     },
     testimonials: {
-      title: 'Quem confia em nosso trabalho',
+      title: 'Who trusts our work',
       items: [
         {
-          quote: 'O plano básico foi perfeito para a minha consultoria. Site no ar rápido, sem complicação e com suporte direto no WhatsApp.',
-          author: 'Ricardo S., Consultor Independente',
+          quote: 'The basic plan was perfect for my consulting business. The site went live quickly, without any hassle, and with direct support on WhatsApp.',
+          author: 'Ricardo S., Independent Consultant',
           rating: 5,
           avatar: 'https://randomuser.me/api/portraits/men/32.jpg'
         },
         {
-          quote: 'Fizemos o upgrade para o plano Premium e agora gerenciamos nosso próprio conteúdo pelo CMS, além de aceitar pagamentos via Stripe!',
-          author: 'Mariana L., Dona de E-commerce',
+          quote: 'We upgraded to the Premium plan and now we manage our own content through the CMS, plus we accept payments via Stripe!',
+          author: 'Mariana L., E-commerce Owner',
           rating: 5,
           avatar: 'https://randomuser.me/api/portraits/women/65.jpg'
         },
         {
-          quote: 'A equipe cuida de todas as atualizações de texto e fotos no plano Profissional. Economizo horas todos os meses.',
-          author: 'Carlos E., Proprietário de Clínica',
+          quote: 'The team handles all the text and photo updates on the Professional plan. I save hours every single month.',
+          author: 'Carlos E., Clinic Owner',
           rating: 5,
           avatar: 'https://randomuser.me/api/portraits/men/35.jpg'
         }
@@ -203,42 +204,45 @@ export const baseContent = {
     },
     faq: {
       id: 'faq',
-      title: 'Perguntas frequentes',
+      title: 'Frequently Asked Questions',
       items: [
         {
-          question: 'O que é considerado uma "Atualização Menor"?',
-          answer: 'Uma atualização menor inclui trocas de texto, substituição de imagens, ou ajustes de links. Mudanças completas de layout não estão inclusas.'
+          question: 'What is considered a "Minor Update"?',
+          answer: 'A minor update includes text changes, image replacements, or link adjustments. Complete layout changes or redesigns are not included.'
         },
         {
-          question: 'Vocês compram o domínio para mim?',
-          answer: 'Você deve comprar e trazer o seu próprio domínio (ex: godaddy, registro.br). A partir daí, nós cuidamos de toda a conexão técnica gratuitamente em qualquer plano.'
+          question: 'Do you buy the domain for me?',
+          answer: 'You must purchase and bring your own domain (e.g., GoDaddy, Namecheap). From there, we handle all the technical connection entirely for free on any plan.'
         },
         {
-          question: 'Como funciona o acesso CMS no plano Premium?',
-          answer: 'No plano Premium, criamos um painel de controle (CMS) seguro onde você mesmo pode fazer login para editar textos, adicionar novos serviços ou fotos de forma ilimitada.'
+          question: 'How does the CMS access work on the Premium plan?',
+          answer: 'On the Premium plan, we create a secure control panel (CMS) where you can log in yourself to edit text, add new services, or upload photos with no limits.'
         },
         {
-          question: 'Posso começar com o Básico e mudar depois?',
-          answer: 'Com certeza! Você pode fazer o upgrade do seu site estático para uma versão dinâmica (Profissional ou Premium) a qualquer momento pagando a diferença.'
+          question: 'Can I start with the Basic plan and upgrade later?',
+          answer: 'Absolutely! You can upgrade your static website to a dynamic version (Professional or Premium) at any time by simply paying the difference.'
         }
       ]
     },
     support: {
-      title: 'Suporte e Contato',
-      description: 'Dúvidas ou novos projetos? Fale conosco em',
+      title: 'Support and Contact',
+      description: 'Questions or new projects? Talk to us at',
       email: 'contatomoveeuropa@gmail.com',
-      responseTime: 'Atendimento prioritário para clientes ativos.'
+      responseTime: 'Priority support given to active clients.'
     }
   },
   contact: {
-    title: 'Inicie seu Projeto Agora',
-    subtitle: 'Preencha o formulário abaixo e entraremos em contato para entender suas necessidades e propor o melhor plano.',
-    disclaimer: 'Seus dados estão seguros conosco e serão usados apenas para contato comercial.',
+    title: 'Start Your Project Now',
+    subtitle: 'Fill out the form below and we will get in touch to understand your needs and propose the best plan.',
+    disclaimer: 'Your data is safe with us and will only be used for business contact purposes.',
     form: {
-      name: 'Seu nome ou nome da empresa',
-      email: 'Seu melhor e-mail',
-      message: 'Conte um pouco sobre seu projeto ou qual plano te interessou',
-      button: 'Enviar Solicitação'
+      name: 'Your name or company name',
+      email: 'Your best email',
+      message: 'Tell us a bit about your project or which plan interested you',
+      button: 'Send Request',
+      loading: 'Sending...',
+      success: 'Your request has been sent! We will get back to you soon.',
+      error: 'Unable to send your message. Please try again.'
     }
   },
   footer: {
